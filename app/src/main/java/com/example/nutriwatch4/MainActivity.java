@@ -73,11 +73,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     public void Registro (View view){
-        String User = (String) email.getText().toString();
-        String Password = (String) password.getText().toString();
         Intent i = new Intent(this, register.class);
-        i.putExtra("x",User);
-        i.putExtra("y",Password);
         startActivity(i);
     }
 }
