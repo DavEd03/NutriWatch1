@@ -51,13 +51,13 @@ public class register extends AppCompatActivity {
             String Apellidos = (String) apellido.getText().toString();
             String Correo = (String) email.getText().toString();
             String Fecha_Nacimiento = (String) fecnac.getText().toString();
-            String Contra = (String) passw.getText().toString();
-            if(Nombres.isEmpty()||Apellidos.isEmpty()||Correo.isEmpty()||Fecha_Nacimiento.isEmpty()||Ciudad.isEmpty()){
+            String contras = (String) passw.getText().toString();
+            if(Nombres.isEmpty()||Apellidos.isEmpty()||Correo.isEmpty()||Fecha_Nacimiento.isEmpty()||contras.isEmpty()){
                 Toast.makeText(register.this, "Ingresa los datos correctos",Toast.LENGTH_LONG).show();
 
             }else{
                 //Método para cargar datos
-                variables upload= new variables(Nombres,Apellidos,Correo,Fecha_Nacimiento,Ciudad);
+                variables upload= new variables(Nombres,Apellidos,Correo,Fecha_Nacimiento,contras);
                 FirebaseDatabase database=FirebaseDatabase.getInstance();
                 DatabaseReference myRef= database.getReference("Usuarios/");
                 // EXECUTE THE QUERY
