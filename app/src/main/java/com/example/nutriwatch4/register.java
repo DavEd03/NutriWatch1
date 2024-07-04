@@ -52,12 +52,9 @@ public class register extends AppCompatActivity {
     public void Register (View view){
         try {
             mAuth=FirebaseAuth.getInstance();
-            String Nombres = (String) nombre.getText().toString();
-            String Apellidos = (String) apellido.getText().toString();
             String Correo = (String) email.getText().toString();
-            String Fecha_Nacimiento = (String) fecnac.getText().toString();
             String contras = (String) passw.getText().toString();
-            if(Nombres.isEmpty()||Apellidos.isEmpty()||Correo.isEmpty()||Fecha_Nacimiento.isEmpty()||contras.isEmpty()){
+            if(Correo.isEmpty() && contras.isEmpty()){
                 Toast.makeText(register.this, "Ingresa los datos correctos",Toast.LENGTH_LONG).show();
 
             }else{
@@ -67,17 +64,6 @@ public class register extends AppCompatActivity {
                         if(task.isComplete()){
                             Toast.makeText(register.this,"Usuario registrado, por favor inicie sesión",Toast.LENGTH_LONG).show();
                         }
-                        //Método para cargar datos
-                        variables upload= new variables(Nombres,Apellidos,Correo,Fecha_Nacimiento,contras);
-                        FirebaseDatabase database=FirebaseDatabase.getInstance();
-                        DatabaseReference myRef= database.getReference("Usuarios/"+Nombres+"/");
-                        // EXECUTE THE QUERY
-                        myRef.setValue(upload);
-                        Bundle bnd1= new Bundle();
-                        bnd1.putString("estado","Aceptado");
-                        Intent i= new Intent(register.this, Confirm_Register.class);
-                        i.putExtras(bnd1);
-                        startActivity(i);
                     }
                 }).addOnFailureListener(this, new OnFailureListener() {
                     @Override
@@ -89,7 +75,6 @@ public class register extends AppCompatActivity {
         }catch (Exception e){
             Toast.makeText(register.this, "Error"+e.getMessage().toString(),Toast.LENGTH_LONG).show();
         }
-
         Intent i = new Intent(this, Confirm_Register.class);
         startActivity(i);
     }
