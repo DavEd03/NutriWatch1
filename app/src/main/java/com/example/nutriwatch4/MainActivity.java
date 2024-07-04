@@ -5,18 +5,27 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
     EditText email;
     EditText password;
     Button Access;
     Button newacount;
+    FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,12 +42,35 @@ public class MainActivity extends AppCompatActivity {
         });
     }
     public void MenuP (View view){
-        String User = (String) email.getText().toString();
-        String Password = (String) password.getText().toString();
-        Intent i = new Intent(this, Menu_Principal.class);
-        i.putExtra("x",User);
-        i.putExtra("y",Password);
-        startActivity(i);
+        try{
+            mAuth=FirebaseAuth.getInstance();
+            String correo, contra;
+            correo=email.getText().toString().trim();
+            contra=password.getText().toString().trim();
+            if(correo.isEmpty()&&contra.isEmpty()){
+                Toast.makeText(MainActivity.this, "Vuelva a ingresar los datos",Toast.LENGTH_LONG).show();
+            }else{
+                mAuth.signInWithEmailAndPassword(correo,contra).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                       if(task.isComplete()){
+                           Bundle bnd1=new Bundle();
+                           bnd1.putString("Usuario",correo);
+                           Intent i =new Intent(MainActivity.this,Menu_Principal.class);
+                           i.putExtras(bnd1);
+                           startActivity(i);
+                       }
+                    }
+                }).addOnFailureListener(this, new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(MainActivity.this,"Error al iniciar sesión "+e.getMessage().toString(),Toast.LENGTH_LONG).show();
+                    }
+                });
+            }
+        }catch (Exception e){
+            Toast.makeText(MainActivity.this,"Error al iniciar sesión "+e.getMessage().toString(),Toast.LENGTH_LONG).show();
+        }
     }
     public void Registro (View view){
         String User = (String) email.getText().toString();
