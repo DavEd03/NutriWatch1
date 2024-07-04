@@ -67,24 +67,24 @@ public class register extends AppCompatActivity {
                         if(task.isComplete()){
                             Toast.makeText(register.this,"Usuario registrado, por favor inicie sesión",Toast.LENGTH_LONG).show();
                         }
+                        //Método para cargar datos
+                        variables upload= new variables(Nombres,Apellidos,Correo,Fecha_Nacimiento,contras);
+                        FirebaseDatabase database=FirebaseDatabase.getInstance();
+                        DatabaseReference myRef= database.getReference("Usuarios/"+Nombres+"/");
+                        // EXECUTE THE QUERY
+                        myRef.setValue(upload);
+                        Bundle bnd1= new Bundle();
+                        bnd1.putString("estado","Aceptado");
+                        Intent i= new Intent(register.this, Confirm_Register.class);
+                        i.putExtras(bnd1);
+                        startActivity(i);
                     }
                 }).addOnFailureListener(this, new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(register.this,"Error "+e.getMessage().toString(),Toast.LENGTH_LONG).show();
+                        Toast.makeText(register.this,"Error en "+e.getMessage().toString(),Toast.LENGTH_LONG).show();
                     }
                 });
-                //Método para cargar datos
-                variables upload= new variables(Nombres,Apellidos,Correo,Fecha_Nacimiento,contras);
-                FirebaseDatabase database=FirebaseDatabase.getInstance();
-                DatabaseReference myRef= database.getReference("Usuarios/");
-                // EXECUTE THE QUERY
-                myRef.setValue(upload);
-                Bundle bnd1= new Bundle();
-                bnd1.putString("estado","Aceptado");
-                Intent i= new Intent(register.this, Confirm_Register.class);
-                i.putExtras(bnd1);
-                startActivity(i);
             }
         }catch (Exception e){
             Toast.makeText(register.this, "Error"+e.getMessage().toString(),Toast.LENGTH_LONG).show();
