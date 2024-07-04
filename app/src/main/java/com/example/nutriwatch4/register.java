@@ -1,5 +1,6 @@
 package com.example.nutriwatch4;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -23,8 +24,9 @@ public class register extends AppCompatActivity {
     EditText apellido;
     EditText email;
     EditText fecnac;
-    EditText ciudad;
+    EditText passw;
     Button regis;
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +36,7 @@ public class register extends AppCompatActivity {
         apellido=(EditText)findViewById(R.id.apellido);
         email=(EditText)findViewById(R.id.correo);
         fecnac=(EditText)findViewById(R.id.fec_nac);
-        ciudad=(EditText)findViewById(R.id.city);
+        passw=(EditText)findViewById(R.id.password);
         regis=(Button) findViewById(R.id.regis);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -49,13 +51,13 @@ public class register extends AppCompatActivity {
             String Apellidos = (String) apellido.getText().toString();
             String Correo = (String) email.getText().toString();
             String Fecha_Nacimiento = (String) fecnac.getText().toString();
-            String Ciudad = (String) ciudad.getText().toString();
-            if(Nombres.isEmpty()||Apellidos.isEmpty()||Correo.isEmpty()||Fecha_Nacimiento.isEmpty()||Ciudad.isEmpty()){
+            String contras = (String) passw.getText().toString();
+            if(Nombres.isEmpty()||Apellidos.isEmpty()||Correo.isEmpty()||Fecha_Nacimiento.isEmpty()||contras.isEmpty()){
                 Toast.makeText(register.this, "Ingresa los datos correctos",Toast.LENGTH_LONG).show();
 
             }else{
                 //Método para cargar datos
-                variables upload= new variables(Nombres,Apellidos,Correo,Fecha_Nacimiento,Ciudad);
+                variables upload= new variables(Nombres,Apellidos,Correo,Fecha_Nacimiento,contras);
                 FirebaseDatabase database=FirebaseDatabase.getInstance();
                 DatabaseReference myRef= database.getReference("Usuarios/");
                 // EXECUTE THE QUERY
