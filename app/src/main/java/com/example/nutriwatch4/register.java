@@ -9,11 +9,16 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -56,6 +61,19 @@ public class register extends AppCompatActivity {
                 Toast.makeText(register.this, "Ingresa los datos correctos",Toast.LENGTH_LONG).show();
 
             }else{
+                mAuth.createUserWithEmailAndPassword(Correo, contras).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if(task.isComplete()){
+                            Toast.makeText(register.this,"Usuario registrado, por favor inicie sesión",Toast.LENGTH_LONG).show();
+                        }
+                    }
+                }).addOnFailureListener(this, new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(register.this,"Error "+e.getMessage().toString(),Toast.LENGTH_LONG).show();
+                    }
+                });
                 //Método para cargar datos
                 variables upload= new variables(Nombres,Apellidos,Correo,Fecha_Nacimiento,contras);
                 FirebaseDatabase database=FirebaseDatabase.getInstance();
