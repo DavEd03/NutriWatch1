@@ -3,6 +3,7 @@ package com.example.nutriwatch4;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,6 +23,8 @@ public class Confirm_Register extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        Bundle datos=getIntent().getExtras();
+        Toast.makeText(Confirm_Register.this,"Registro: "+datos,Toast.LENGTH_LONG).show();
     }
     public void MenuP (View view){
         Intent i = new Intent(this, MainActivity.class);
