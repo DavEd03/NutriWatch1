@@ -21,11 +21,12 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
+    FirebaseAuth mAuth;
     EditText email;
     EditText password;
     Button Access;
     Button newacount;
-    FirebaseAuth mAuth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,8 +55,9 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                        if(task.isComplete()){
-                           Intent i =new Intent(MainActivity.this,Menu_Principal.class);
-                           startActivity(i);
+                           Toast.makeText(MainActivity.this,"Bienvenido "+correo,Toast.LENGTH_LONG).show();
+                           //Intent i =new Intent(MainActivity.this,Menu_Principal.class);
+                          // startActivity(i);
                        }
                     }
                 }).addOnFailureListener(this, new OnFailureListener() {

@@ -31,29 +31,28 @@ public class register extends AppCompatActivity {
     EditText fecnac;
     EditText passw;
     Button regis;
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_register);
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
         nombre=(EditText)findViewById(R.id.name);
         apellido=(EditText)findViewById(R.id.apellido);
         email=(EditText)findViewById(R.id.correo);
         fecnac=(EditText)findViewById(R.id.fec_nac);
         passw=(EditText)findViewById(R.id.password);
         regis=(Button) findViewById(R.id.regis);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
     }
     public void Register (View view){
         try {
             mAuth=FirebaseAuth.getInstance();
-            String Correo = (String) email.getText().toString();
-            String contras = (String) passw.getText().toString();
+            String Correo = email.getText().toString().trim();
+            String contras = passw.getText().toString().trim();
             if(Correo.isEmpty() && contras.isEmpty()){
                 Toast.makeText(register.this, "Ingresa los datos correctos",Toast.LENGTH_LONG).show();
 
@@ -75,7 +74,7 @@ public class register extends AppCompatActivity {
         }catch (Exception e){
             Toast.makeText(register.this, "Error"+e.getMessage().toString(),Toast.LENGTH_LONG).show();
         }
-        Intent i = new Intent(this, Confirm_Register.class);
+        Intent i = new Intent(register.this, Confirm_Register.class);
         startActivity(i);
     }
 }
