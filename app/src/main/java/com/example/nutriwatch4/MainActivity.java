@@ -54,10 +54,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                        if(task.isComplete()){
-                           Bundle bnd1=new Bundle();
-                           bnd1.putString("Usuario",correo);
                            Intent i =new Intent(MainActivity.this,Menu_Principal.class);
-                           i.putExtras(bnd1);
                            startActivity(i);
                        }
                     }
