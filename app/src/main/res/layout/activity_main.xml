@@ -43,8 +43,8 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <LinearLayout
-        android:layout_width="281dp"
-        android:layout_height="474dp"
+        android:layout_width="278dp"
+        android:layout_height="437dp"
         android:background="#77A676"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -72,9 +72,9 @@
             android:layout_margin="5dp"
             android:background="@color/white"
             android:ems="10"
-            android:textColor="@color/black"
             android:hint="Correo"
             android:inputType="text"
+            android:textColor="@color/black"
             android:textSize="20dp" />
 
         <TextView
@@ -96,9 +96,9 @@
             android:layout_margin="5dp"
             android:background="@color/white"
             android:ems="10"
-            android:textColor="@color/black"
             android:hint="Contraseña"
             android:inputType="textPassword"
+            android:textColor="@color/black"
             android:textSize="20dp" />
 
         <Button
@@ -132,8 +132,8 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:backgroundTint="#AFE198"
-            android:text="Crear Cuenta"
-            android:onClick="Registro"/>
+            android:onClick="Registro"
+            android:text="Crear Cuenta" />
     </LinearLayout>
 
     <TextView

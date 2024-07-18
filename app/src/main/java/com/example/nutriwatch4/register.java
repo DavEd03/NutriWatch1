@@ -1,6 +1,5 @@
 package com.example.nutriwatch4;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -23,7 +22,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class register extends AppCompatActivity {
     FirebaseAuth mAuth;
     EditText nombre;
-    EditText apellido;
+    EditText contra;
     EditText email;
     EditText edad;
     EditText ciudad;
@@ -34,7 +33,7 @@ public class register extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_register);
         nombre=(EditText)findViewById(R.id.name);
-        apellido=(EditText)findViewById(R.id.apellido);
+        contra=(EditText)findViewById(R.id.usr_contra);
         email=(EditText)findViewById(R.id.correo);
         edad=(EditText)findViewById(R.id.fec_nac);
         ciudad=(EditText)findViewById(R.id.city);
@@ -49,7 +48,7 @@ public class register extends AppCompatActivity {
         try {
         mAuth= FirebaseAuth.getInstance();
         String Nombres = (String) nombre.getText().toString().trim();
-        String Apellidos = (String) apellido.getText().toString().trim();
+        String Apellidos = (String)contra.getText().toString().trim();
         if(Nombres.isEmpty()&& Apellidos.isEmpty()){
             Toast.makeText(register.this, "Ingresa los datos correctos", Toast.LENGTH_LONG).show();
         }else{

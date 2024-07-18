@@ -54,8 +54,7 @@ public class MainActivity extends AppCompatActivity {
                       if(task.isComplete()){
                           Toast.makeText(MainActivity.this, "Inicio de Sesión exitoso", Toast.LENGTH_LONG).show();
                           Intent i = new Intent(MainActivity.this, Menu_Principal.class);
-                          i.putExtra("x",User);
-                          i.putExtra("y",Password);
+                          i.putExtra("nUsuario",User);
                           startActivity(i);
                       }
                   }
