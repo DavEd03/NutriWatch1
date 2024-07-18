@@ -82,7 +82,7 @@
         <TextView
             android:id="@+id/textView4"
             android:layout_width="match_parent"
-            android:layout_height="85dp"
+            android:layout_height="50dp"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="15dp"
             android:gravity="center_horizontal"
@@ -90,6 +90,10 @@
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="15dp" />
+
+        <ListView
+            android:layout_width="345dp"
+            android:layout_height="320dp" />
 
     </LinearLayout>
 
