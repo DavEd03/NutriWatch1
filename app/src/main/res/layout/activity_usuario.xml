@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/seguimient_al"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#BED9BA"
@@ -33,7 +33,7 @@
         android:gravity="center_horizontal"
         android:text="NutriWatch"
         android:textAlignment="center"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="35dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,13 +46,15 @@
         android:id="@+id/regresar"
         android:layout_width="323dp"
         android:layout_height="35dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="52dp"
         android:backgroundTint="#AFE198"
         android:onClick="MenuP"
         android:text="Regresar a la Pantalla Principal"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.899" />
 
     <TextView
         android:id="@+id/textView10"
@@ -230,6 +232,7 @@
                 android:backgroundTint="#AFE198"
                 android:onClick="MenuP"
                 android:text="Actualizar"
+                android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent">
 

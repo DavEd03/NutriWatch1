@@ -30,7 +30,7 @@ public class register extends AppCompatActivity {
         fecnac=(EditText)findViewById(R.id.fec_nac);
         ciudad=(EditText)findViewById(R.id.city);
         regis=(Button) findViewById(R.id.regis);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.seguimient_al), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;

@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         password=(EditText)findViewById(R.id.contrasena);
         Access=(Button) findViewById(R.id.acceder);
         newacount=(Button) findViewById(R.id.newcuenta);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.seguimient_al), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
