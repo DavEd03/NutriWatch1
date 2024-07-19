@@ -31,4 +31,16 @@ public class Menu_Principal extends AppCompatActivity {
         startActivity(i);
     }
 
+    public void control_S(View view){
+        Intent cambio= new Intent(this, control_salud.class);
+    startActivity(cambio);
+    }
+    public void recomendaciones_ej(View view){
+        Intent i= new Intent(this, recomendaciones_ej.class);
+        startActivity(i);
+    }
+    public void seguimiento_ali(View view){
+        Intent i= new Intent(this, seguimiento_al.class);
+        startActivity(i);
+    }
 }

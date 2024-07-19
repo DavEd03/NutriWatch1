@@ -59,13 +59,14 @@
         android:id="@+id/regis"
         android:layout_width="323dp"
         android:layout_height="46dp"
-        android:layout_marginEnd="44dp"
         android:layout_marginBottom="72dp"
-        android:backgroundTint="#AFE198"
+        android:backgroundTint="#267331"
         android:onClick="MenuP"
         android:text="Regresar a la Pantalla Principal"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <LinearLayout
         android:layout_width="356dp"
