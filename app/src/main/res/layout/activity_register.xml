@@ -77,29 +77,6 @@
             android:textColor="@color/black"
             android:textSize="20dp" />
         <TextView
-            android:id="@+id/textView8"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:gravity="center_horizontal"
-            android:text="Apellidos"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="20dp" />
-
-        <EditText
-            android:id="@+id/apellido"
-            android:layout_width="match_parent"
-            android:layout_height="42dp"
-            android:layout_margin="5dp"
-            android:background="@color/white"
-            android:ems="10"
-            android:hint="Apellidos"
-            android:inputType="text"
-            android:textColor="@color/black"
-            android:textSize="20dp" />
-        <TextView
             android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -122,6 +99,32 @@
             android:inputType="text"
             android:textColor="@color/black"
             android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center_horizontal"
+            android:text="Contraseña"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/usr_contra"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_margin="5dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:hint="Contraseña"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+
 
         <TextView
             android:id="@+id/textView4"
