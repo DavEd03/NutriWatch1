@@ -19,6 +19,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class register extends AppCompatActivity {
     FirebaseAuth mAuth;
@@ -28,7 +30,7 @@ public class register extends AppCompatActivity {
     EditText edad;
     EditText ciudad;
     Button regis;
-    String uid;
+    private String uid;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,15 +62,13 @@ public class register extends AppCompatActivity {
                     if(task.isComplete()){
                         FirebaseUser user = mAuth.getCurrentUser();
                         if (user != null) {
-                             uid = user.getUid();
+                           uid= user.getUid();
                             Toast.makeText(register.this, "Usuario registrado correctamente", Toast.LENGTH_SHORT).show();
+                            cargarDatos();
                         } else {
                             Toast.makeText(register.this, "EL usuario no existe", Toast.LENGTH_SHORT).show();
                         }
-
-
                     }
-
                 }
             }).addOnFailureListener(this, new OnFailureListener() {
                 @Override
@@ -77,16 +77,32 @@ public class register extends AppCompatActivity {
                 }
             });
         }
-        }catch (Exception e){
-            Toast.makeText(register.this,"Error "+e.getMessage().toString(),Toast.LENGTH_LONG).show();
+        }catch (Exception e1){
+            Toast.makeText(register.this,"Error "+e1.getMessage().toString(),Toast.LENGTH_LONG).show();
         }
+
+    }
+    private void cargarDatos()
+    {
         try{
             String Nombre= nombre.getText().toString().trim();
             String Edad= edad.getText().toString().trim();
             String Ciudad= ciudad.getText().toString().trim();
             String Correo= email.getText().toString().trim();
-        }catch (Exception e){
-
+            //Upload datos
+            variables upload= new variables(Nombre, Edad, Correo, Ciudad);
+            FirebaseDatabase database = FirebaseDatabase.getInstance();
+            DatabaseReference myRef = database.getReference("Usuarios/"+ uid + "/Datos básicos/");
+            myRef.setValue(upload);
+            Toast.makeText(register.this,"Usuario registrado correctamente",Toast.LENGTH_LONG).show();
+            nombre.setText("");
+            edad.setText("");
+            ciudad.setText("");
+            email.setText("");
+            contra.setText("");
+        }catch (Exception e2){
+            Toast.makeText(register.this,"Error en: "+e2.getMessage(),Toast.LENGTH_LONG).show();
         }
     }
+
 }
