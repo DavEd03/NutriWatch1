@@ -44,9 +44,9 @@
 
     <Button
         android:id="@+id/regresar"
-        android:layout_width="323dp"
-        android:layout_height="35dp"
-        android:backgroundTint="#AFE198"
+        android:layout_width="325dp"
+        android:layout_height="41dp"
+        android:backgroundTint="#267331"
         android:onClick="MenuP"
         android:text="Regresar a la Pantalla Principal"
         android:textColor="@color/black"
@@ -229,7 +229,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginEnd="40dp"
                 android:layout_marginBottom="52dp"
-                android:backgroundTint="#AFE198"
+                android:backgroundTint="#267331"
                 android:onClick="MenuP"
                 android:text="Actualizar"
                 android:textColor="@color/black"

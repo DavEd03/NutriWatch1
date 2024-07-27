@@ -178,7 +178,7 @@
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#BED9BA"
+            android:backgroundTint="#267331"
             android:text="Regresar"
             android:textColor="@color/black" />
     </LinearLayout>
