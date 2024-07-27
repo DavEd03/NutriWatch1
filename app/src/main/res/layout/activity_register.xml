@@ -120,7 +120,7 @@
             android:background="@color/white"
             android:ems="10"
             android:hint="Contraseña"
-            android:inputType="text"
+            android:inputType="textPassword"
             android:textColor="@color/black"
             android:textSize="20dp" />
 
@@ -185,6 +185,8 @@
             android:backgroundTint="#AFE198"
             android:onClick="Register"
             android:text="Registrar" />
+
+
 
     </LinearLayout>
 
