@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void MenuP (View view){
         try{
+            mAuth=FirebaseAuth.getInstance();
             String User = (String) email.getText().toString();
             String Password = (String) password.getText().toString();
             if(User.isEmpty()&& Password.isEmpty()){
@@ -74,8 +75,6 @@ public class MainActivity extends AppCompatActivity {
         String User = (String) email.getText().toString();
         String Password = (String) password.getText().toString();
         Intent i = new Intent(this, register.class);
-        i.putExtra("x",User);
-        i.putExtra("y",Password);
         startActivity(i);
     }
 }
