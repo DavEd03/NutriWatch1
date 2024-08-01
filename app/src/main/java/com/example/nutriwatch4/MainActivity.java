@@ -19,6 +19,7 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
     FirebaseAuth mAuth;
@@ -40,7 +41,23 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
     }
+    FirebaseAuth auth = FirebaseAuth.getInstance();
+    @Override
+    protected void onStart() {
+        super.onStart();
+        FirebaseUser currentUser = auth.getCurrentUser();
+        if (currentUser != null) {
+            Intent i = new Intent(MainActivity.this, Menu_Principal.class);
+            i.putExtra("nUsuario",currentUser);
+            startActivity(i);
+        } else {
+            // No hay usuario autenticado
+            // Mostrar pantalla de inicio de sesión
+        }
+    }
+
     public void MenuP (View view){
         try{
             mAuth=FirebaseAuth.getInstance();
