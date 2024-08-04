@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     EditText password;
     Button Access;
     Button newacount;
+    private String uid;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,12 +50,12 @@ public class MainActivity extends AppCompatActivity {
         super.onStart();
         FirebaseUser currentUser = auth.getCurrentUser();
         if (currentUser != null) {
+            uid= currentUser.getUid();
             Intent i = new Intent(MainActivity.this, Menu_Principal.class);
-            i.putExtra("nUsuario",currentUser);
+            i.putExtra("nUsuario",uid);
             startActivity(i);
         } else {
-            // No hay usuario autenticado
-            // Mostrar pantalla de inicio de sesión
+           Toast.makeText(this, "Por favor inicie sesión con su cuenta", Toast.LENGTH_LONG).show();
         }
     }
 
@@ -70,9 +71,11 @@ public class MainActivity extends AppCompatActivity {
                   @Override
                   public void onComplete(@NonNull Task<AuthResult> task) {
                       if(task.isComplete()){
+                          FirebaseUser currentUser = auth.getCurrentUser();
                           Toast.makeText(MainActivity.this, "Inicio de Sesión exitoso", Toast.LENGTH_LONG).show();
                           Intent i = new Intent(MainActivity.this, Menu_Principal.class);
-                          i.putExtra("nUsuario",User);
+                          uid= currentUser.getUid();
+                          i.putExtra("nUsuario",uid);
                           startActivity(i);
                       }
                   }

@@ -90,7 +90,7 @@ public class register extends AppCompatActivity {
             String Ciudad= ciudad.getText().toString().trim();
             String Correo= email.getText().toString().trim();
             //Upload datos
-            variables upload= new variables(Nombre, Edad, Correo, Ciudad);
+            variables upload= new variables(Nombre, Correo, Edad, Ciudad);
             FirebaseDatabase database = FirebaseDatabase.getInstance();
             DatabaseReference myRef = database.getReference("Usuarios/"+ uid + "/Datos básicos/");
             myRef.setValue(upload);

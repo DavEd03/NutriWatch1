@@ -2,6 +2,7 @@ package com.example.nutriwatch4;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,6 +14,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class Menu_Principal extends AppCompatActivity {
     FirebaseAuth mAuth;
+    String userId;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +26,9 @@ public class Menu_Principal extends AppCompatActivity {
             return insets;
         });
         mAuth=FirebaseAuth.getInstance();
+        Bundle datos= getIntent().getExtras();
+        userId= datos.getString("nUsuario");
+        Toast.makeText(this,userId,Toast.LENGTH_SHORT).show();
     }
     public void Notificacion (View view){
         Intent i = new Intent(this, Notification.class);
