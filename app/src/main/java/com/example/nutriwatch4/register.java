@@ -85,12 +85,17 @@ public class register extends AppCompatActivity {
     private void cargarDatos()
     {
         try{
+            String defau ="No establecido";
             String Nombre= nombre.getText().toString().trim();
             String Edad= edad.getText().toString().trim();
             String Ciudad= ciudad.getText().toString().trim();
             String Correo= email.getText().toString().trim();
+            String Peso= defau;
+            String Imc= defau;
+            String estatura=defau;
+            String enfermedades=defau;
             //Upload datos
-            variables upload= new variables(Nombre, Correo, Edad, Ciudad);
+            variables upload= new variables(Nombre, Correo, Edad, Ciudad, Peso, Imc, estatura, enfermedades);
             FirebaseDatabase database = FirebaseDatabase.getInstance();
             DatabaseReference myRef = database.getReference("Usuarios/"+ uid + "/Datos básicos/");
             myRef.setValue(upload);

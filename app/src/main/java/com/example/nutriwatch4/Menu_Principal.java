@@ -28,7 +28,7 @@ public class Menu_Principal extends AppCompatActivity {
         mAuth=FirebaseAuth.getInstance();
         Bundle datos= getIntent().getExtras();
         userId= datos.getString("nUsuario");
-        Toast.makeText(this,userId,Toast.LENGTH_SHORT).show();
+       // Toast.makeText(this,userId,Toast.LENGTH_SHORT).show();
     }
     public void Notificacion (View view){
         Intent i = new Intent(this, Notification.class);
@@ -36,6 +36,7 @@ public class Menu_Principal extends AppCompatActivity {
     }
     public void User (View view){
         Intent i = new Intent(this, Usuario.class);
+        i.putExtra("nUsuario",userId);
         startActivity(i);
     }
 

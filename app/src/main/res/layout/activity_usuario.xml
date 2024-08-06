@@ -91,21 +91,7 @@
                 android:textColor="@color/black" />
 
             <EditText
-                android:layout_marginRight="10dp"
-                android:background="@color/white"
-                android:textColor="@color/black" />
-        </TableRow>
-
-        <TableRow android:layout_marginTop="10dp">
-
-            <TextView
-                android:layout_marginRight="20dp"
-                android:padding="8dp"
-
-                android:text="Apellidos:"
-                android:textColor="@color/black" />
-
-            <EditText
+                android:id="@+id/edtnombre"
                 android:layout_marginRight="10dp"
                 android:background="@color/white"
                 android:textColor="@color/black" />
@@ -121,6 +107,7 @@
                 android:textColor="@color/black" />
 
             <EditText
+                android:id="@+id/edtedad"
                 android:layout_marginRight="10dp"
                 android:background="@color/white"
                 android:textColor="@color/black" />
@@ -136,6 +123,7 @@
                 android:textColor="@color/black" />
 
             <EditText
+                android:id="@+id/edtpeso"
                 android:layout_marginRight="10dp"
                 android:background="@color/white"
                 android:textColor="@color/black" />
@@ -151,6 +139,7 @@
                 android:textColor="@color/black" />
 
             <EditText
+                android:id="@+id/edtTalla"
                 android:layout_marginRight="10dp"
                 android:background="@color/white"
                 android:textColor="@color/black" />
@@ -166,6 +155,7 @@
                 android:textColor="@color/black" />
 
             <EditText
+                android:id="@+id/edtEstatura"
                 android:layout_marginRight="10dp"
                 android:background="@color/white"
                 android:textColor="@color/black" />
@@ -181,6 +171,7 @@
                 android:textColor="@color/black" />
 
             <EditText
+                android:id="@+id/edtImc"
                 android:layout_marginRight="10dp"
                 android:background="@color/white"
                 android:textColor="@color/black" />
@@ -196,6 +187,7 @@
                 android:textColor="@color/black" />
 
             <EditText
+                android:id="@+id/edtEnf"
                 android:layout_marginRight="10dp"
                 android:background="@color/white"
                 android:textColor="@color/black" />
