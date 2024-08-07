@@ -44,8 +44,8 @@
 
     <Button
         android:id="@+id/regresar"
-        android:layout_width="325dp"
-        android:layout_height="41dp"
+        android:layout_width="343dp"
+        android:layout_height="52dp"
         android:backgroundTint="#267331"
         android:onClick="MenuP"
         android:text="Regresar a la Pantalla Principal"
@@ -88,7 +88,8 @@
                 android:padding="8dp"
 
                 android:text="Nombre:"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:textSize="18dp" />
 
             <EditText
                 android:layout_marginRight="10dp"
@@ -103,7 +104,8 @@
                 android:padding="8dp"
 
                 android:text="Apellidos:"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:textSize="16sp" />
 
             <EditText
                 android:layout_marginRight="10dp"
@@ -118,7 +120,8 @@
                 android:padding="8dp"
 
                 android:text="Edad:"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:textSize="16sp" />
 
             <EditText
                 android:layout_marginRight="10dp"
@@ -133,9 +136,12 @@
                 android:padding="8dp"
 
                 android:text="Peso:"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:textSize="18dp" />
 
             <EditText
+                android:layout_width="163dp"
+                android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
                 android:background="@color/white"
                 android:textColor="@color/black" />
@@ -148,7 +154,8 @@
                 android:padding="8dp"
 
                 android:text="Talla:"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:textSize="18dp" />
 
             <EditText
                 android:layout_marginRight="10dp"
@@ -163,7 +170,8 @@
                 android:padding="8dp"
 
                 android:text="Estatura:"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:textSize="18dp" />
 
             <EditText
                 android:layout_marginRight="10dp"
@@ -178,7 +186,8 @@
                 android:padding="8dp"
 
                 android:text="IMC:"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:textSize="18dp" />
 
             <EditText
                 android:layout_marginRight="10dp"
@@ -193,7 +202,8 @@
                 android:padding="8dp"
 
                 android:text="Enfermedades:"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:textSize="18dp" />
 
             <EditText
                 android:layout_marginRight="10dp"

@@ -75,8 +75,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="321dp"
-        android:layout_height="430dp"
+        android:layout_width="341dp"
+        android:layout_height="493dp"
         android:background="#77A676"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -90,8 +90,10 @@
             android:id="@+id/textView11"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingTop="15dp"
             android:text="Almuerzo"
             android:textAlignment="center"
+            android:textColor="@color/black"
             android:textSize="20sp" />
 
         <EditText
@@ -108,8 +110,10 @@
             android:id="@+id/textView12"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingTop="15dp"
             android:text="Colacion"
             android:textAlignment="center"
+            android:textColor="@color/black"
             android:textColorLink="#000000"
             android:textSize="20sp" />
 
@@ -126,8 +130,10 @@
             android:id="@+id/textView13"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingTop="15dp"
             android:text="Comida"
             android:textAlignment="center"
+            android:textColor="@color/black"
             android:textSize="20sp" />
 
         <EditText
@@ -144,8 +150,10 @@
             android:id="@+id/textView14"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingTop="15dp"
             android:text="Colacion"
             android:textAlignment="center"
+            android:textColor="@color/black"
             android:textSize="20sp" />
 
         <EditText
@@ -161,8 +169,10 @@
             android:id="@+id/textView15"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingTop="15dp"
             android:text="Cena"
             android:textAlignment="center"
+            android:textColor="@color/black"
             android:textSize="20sp" />
 
         <EditText
@@ -178,7 +188,9 @@
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:backgroundTint="#267331"
+            android:onClick="MenuP"
             android:text="Regresar"
             android:textColor="@color/black" />
     </LinearLayout>
@@ -192,7 +204,7 @@
         app:layout_constraintHorizontal_bias="0.955"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.247" />
+        app:layout_constraintVertical_bias="0.232" />
 
     <CheckBox
         android:id="@+id/checkBox2"
@@ -203,7 +215,7 @@
         app:layout_constraintHorizontal_bias="0.955"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.341" />
+        app:layout_constraintVertical_bias="0.344" />
 
     <CheckBox
         android:id="@+id/checkBox3"
@@ -214,7 +226,7 @@
         app:layout_constraintHorizontal_bias="0.955"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.439" />
+        app:layout_constraintVertical_bias="0.465" />
 
     <CheckBox
         android:id="@+id/checkBox4"
@@ -225,7 +237,7 @@
         app:layout_constraintHorizontal_bias="0.955"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.535" />
+        app:layout_constraintVertical_bias="0.569" />
 
     <CheckBox
         android:id="@+id/checkBox5"
@@ -236,6 +248,6 @@
         app:layout_constraintHorizontal_bias="0.955"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.622" />
+        app:layout_constraintVertical_bias="0.688" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

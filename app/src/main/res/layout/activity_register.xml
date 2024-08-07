@@ -33,7 +33,7 @@
         android:gravity="center_horizontal"
         android:text="NutriWatch"
         android:textAlignment="center"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="35dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -62,7 +62,7 @@
             android:gravity="center_horizontal"
             android:text="Nombre"
             android:textAlignment="center"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="20dp" />
 
         <EditText
@@ -76,6 +76,7 @@
             android:inputType="text"
             android:textColor="@color/black"
             android:textSize="20dp" />
+
         <TextView
             android:id="@+id/textView3"
             android:layout_width="match_parent"
@@ -85,7 +86,7 @@
             android:gravity="center_horizontal"
             android:text="Correo"
             android:textAlignment="center"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="20dp" />
 
         <EditText
@@ -109,7 +110,7 @@
             android:gravity="center_horizontal"
             android:text="Contraseña"
             android:textAlignment="center"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="20dp" />
 
         <EditText
@@ -125,7 +126,6 @@
             android:textSize="20dp" />
 
 
-
         <TextView
             android:id="@+id/textView4"
             android:layout_width="match_parent"
@@ -135,7 +135,7 @@
             android:gravity="center_horizontal"
             android:text="Edad"
             android:textAlignment="center"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="20dp" />
 
         <EditText
@@ -159,7 +159,7 @@
             android:gravity="center_horizontal"
             android:text="Ciudad"
             android:textAlignment="center"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="20dp" />
 
         <EditText
@@ -184,7 +184,8 @@
             android:layout_marginBottom="20dp"
             android:backgroundTint="#267331"
             android:onClick="Register"
-            android:text="Registrar" />
+            android:text="Registrar"
+            android:textColor="@color/black" />
 
     </LinearLayout>
 
