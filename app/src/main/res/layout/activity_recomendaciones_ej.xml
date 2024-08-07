@@ -9,7 +9,7 @@
     tools:context=".recomendaciones_ej">
 
     <Button
-        android:id="@+id/regis"
+        android:id="@+id/REGRESAR"
         android:layout_width="323dp"
         android:layout_height="46dp"
         android:layout_marginBottom="72dp"
@@ -22,6 +22,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <LinearLayout
+        android:id="@+id/LAYAUT"
         android:layout_width="356dp"
         android:layout_height="448dp"
         android:background="#77A676"
@@ -34,7 +35,7 @@
         app:layout_constraintVertical_bias="0.498">
 
         <TextView
-            android:id="@+id/EJER"
+            android:id="@+id/E"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="15dp"
@@ -63,21 +64,9 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.498">
 
-        <TextView
-            android:id="@+id/EJER"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="15dp"
-            android:gravity="center_horizontal"
-            android:text="Ejercisios"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
-
         <ListView
-            android:layout_width="345dp"
-            android:layout_height="320dp" />
+            android:layout_width="344dp"
+            android:layout_height="397dp" />
 
     </LinearLayout>
 

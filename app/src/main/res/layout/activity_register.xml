@@ -127,7 +127,7 @@
 
 
         <TextView
-            android:id="@+id/EJER"
+            android:id="@+id/E"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
@@ -175,7 +175,7 @@
             android:textSize="20dp" />
 
         <Button
-            android:id="@+id/regis"
+            android:id="@+id/REGRESAR"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
