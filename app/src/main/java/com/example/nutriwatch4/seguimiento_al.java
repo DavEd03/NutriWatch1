@@ -23,8 +23,8 @@ public class seguimiento_al extends AppCompatActivity {
             return insets;
         });
     }
-    public void MenuP (View view){
-        Intent i = new Intent(this, Menu_Principal.class);
-        startActivity(i);
+    public void control_S(View view){
+        Intent cambio= new Intent(this, control_salud.class);
+        startActivity(cambio);
     }
 }
