@@ -57,7 +57,7 @@
         app:layout_constraintVertical_bias="0.899" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/recomenaciones"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"

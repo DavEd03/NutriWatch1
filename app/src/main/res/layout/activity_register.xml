@@ -127,7 +127,7 @@
 
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/textView0004"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
@@ -190,7 +190,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/recomenaciones"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
