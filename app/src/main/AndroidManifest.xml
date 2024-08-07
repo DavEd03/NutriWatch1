@@ -16,7 +16,7 @@
             android:name=".recomendaciones_ej"
             android:exported="false" />
         <activity
-            android:name=".centro_not"
+            android:name=".centro_noti"
             android:exported="false" />
         <activity
             android:name=".control_salud"
