@@ -94,8 +94,9 @@ public class register extends AppCompatActivity {
             String Imc= defau;
             String estatura=defau;
             String enfermedades=defau;
+            String talla= defau;
             //Upload datos
-            variables upload= new variables(Nombre, Correo, Edad, Ciudad, Peso, Imc, estatura, enfermedades);
+            variables upload= new variables(Nombre, Correo, Edad, Ciudad, Peso, Imc, estatura, enfermedades, talla);
             FirebaseDatabase database = FirebaseDatabase.getInstance();
             DatabaseReference myRef = database.getReference("Usuarios/"+ uid + "/Datos básicos/");
             myRef.setValue(upload);

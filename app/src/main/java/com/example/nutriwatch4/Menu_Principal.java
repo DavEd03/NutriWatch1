@@ -11,6 +11,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class Menu_Principal extends AppCompatActivity {
     FirebaseAuth mAuth;
@@ -27,7 +28,26 @@ public class Menu_Principal extends AppCompatActivity {
         });
         mAuth=FirebaseAuth.getInstance();
         Bundle datos= getIntent().getExtras();
-        userId= datos.getString("nUsuario");
+        if(datos != null) {
+            userId= datos.getString("nUsuario");
+            if (userId == null) {
+                // "nUsuario" no existe en el Bundle
+                FirebaseUser user = mAuth.getCurrentUser();
+                if (user != null) {
+                    userId = user.getUid();
+                } else {
+                    // No se puede obtener el UID, manejar el error
+                    showErrorAndRedirect();
+                }
+            }
+        }else{
+            FirebaseUser user = mAuth.getCurrentUser();
+            if (user!=null) {
+                userId = user.getUid();
+            }else{
+                showErrorAndRedirect();
+            }
+        }
        // Toast.makeText(this,userId,Toast.LENGTH_SHORT).show();
     }
     public void Notificacion (View view){
@@ -54,8 +74,17 @@ public class Menu_Principal extends AppCompatActivity {
     }
     public void cerrar(View v){
         mAuth.signOut();
-        finish();
         Intent ini= new Intent(this,MainActivity.class);
         startActivity(ini);
+        finish();
     }
+    private void showErrorAndRedirect() {
+        // Mostrar un mensaje de error al usuario
+        Toast.makeText(this, "Error al obtener la información del usuario. Por favor, intenta iniciar sesión nuevamente.", Toast.LENGTH_LONG).show();
+        // Redirigir al usuario a la pantalla de inicio de sesión
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish(); // Cerrar la actividad actual
+    }
+
 }

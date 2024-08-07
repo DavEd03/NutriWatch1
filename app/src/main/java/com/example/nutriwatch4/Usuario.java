@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
@@ -65,20 +66,25 @@ public class Usuario extends AppCompatActivity {
                     String edad = dataSnapshot.child("edad").getValue(String.class);
                     String imc= dataSnapshot.child("imc").getValue(String.class);
                     String talla= dataSnapshot.child("talla").getValue(String.class);
-                    String Enf = dataSnapshot.child("Enfermedad").getValue(String.class);
+                    String Enf = dataSnapshot.child("enfermedades").getValue(String.class);
                     String peso= dataSnapshot.child("peso").getValue(String.class);
                     String estatura = dataSnapshot.child("estatura").getValue(String.class);
 
 
                     // Rellenar los EditText con los datos obtenidos
                    // editTextNombre.setText(nombre);
-                   // editTextCorreo.setText(correo);
-                   // editTextTelefono.setText(telefono);
+                    edtEdad.setText(edad);
+                    edtNombre.setText(nombre);
+                    edtPeso.setText(peso);
+                    edtTalla.setText(talla);
+                    edtEst.setText(estatura);
+                    edtImc.setText(imc);
+                    edtEnf.setText(Enf);
                 }
 
                 @Override
                 public void onCancelled(@NonNull DatabaseError databaseError) {
-                    // Manejar posibles errores
+                   Toast.makeText(Usuario.this, "Error al obtener la información del usuario, intente más tarde",Toast.LENGTH_SHORT).show();
                 }
             });
         }
@@ -87,6 +93,19 @@ public class Usuario extends AppCompatActivity {
     public void MenuP (View view){
         Intent i = new Intent(this, Menu_Principal.class);
         startActivity(i);
+    }
+    public void modificardatos(){
+    try{
+        String Nombre= edtNombre.getText().toString().trim();
+        String Edad= edtEdad.getText().toString().trim();
+        String Peso= edtPeso.getText().toString().trim();
+        String Imc= edtImc.getText().toString().trim();
+        String estatura=edtEst.getText().toString().trim();
+        String enfermedades=edtEnf.getText().toString().trim();
+        String talla= edtTalla.getText().toString().trim();
+    }catch (Exception e){
+
+    }
     }
 
 
