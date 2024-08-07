@@ -3,14 +3,13 @@ package com.example.nutriwatch4;
 public class variables {
     private String nombre;
     private String correo;
-    private String contra;
+
     private String edad;
     private String Ciudad;
 
-    public variables(String nombre, String correo, String contra, String edad, String Ciudad){
+    public variables(String nombre, String correo, String edad, String Ciudad){
         this.nombre=nombre;
         this.correo=correo;
-        this.contra= contra;
         this.edad= edad;
         this.Ciudad= Ciudad;
 
@@ -23,10 +22,6 @@ public class variables {
 
     public String getCorreo() {
         return correo;
-    }
-
-    public String getContra() {
-        return contra;
     }
 
     public String getEdad() {
@@ -46,9 +41,6 @@ public class variables {
         this.correo = correo;
     }
 
-    public void setContra(String contra) {
-        this.contra = contra;
-    }
 
     public void setEdad(String edad) {
         this.edad = edad;
