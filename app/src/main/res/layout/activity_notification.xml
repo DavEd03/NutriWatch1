@@ -9,7 +9,7 @@
     tools:context=".Notification">
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/recomenaciones"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
@@ -56,11 +56,11 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/regis"
+        android:id="@+id/REGRESAR"
         android:layout_width="323dp"
         android:layout_height="46dp"
         android:layout_marginBottom="72dp"
-        android:backgroundTint="#267331"
+        android:backgroundTint="#77A676"
         android:onClick="MenuP"
         android:text="Regresar a la Pantalla Principal"
         android:textColor="@color/black"
@@ -69,6 +69,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="356dp"
         android:layout_height="448dp"
         android:background="#77A676"
@@ -81,7 +82,7 @@
         app:layout_constraintVertical_bias="0.498">
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/E"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="15dp"
@@ -108,6 +109,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/user"
         android:onClick="User"/>
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="267dp"
+        android:layout_height="228dp"
+        android:layout_marginBottom="596dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:srcCompat="@mipmap/nutriasset_foreground" />
+
 
 
 

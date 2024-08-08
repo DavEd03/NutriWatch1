@@ -1,5 +1,6 @@
 package com.example.nutriwatch4;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -41,12 +42,16 @@ public class register extends AppCompatActivity {
         email=(EditText)findViewById(R.id.correo);
         edad=(EditText)findViewById(R.id.fec_nac);
         ciudad=(EditText)findViewById(R.id.city);
-        regis=(Button) findViewById(R.id.regis);
+        regis=(Button) findViewById(R.id.REGRESAR);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.seguimient_al), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+    public void MenuP (View view){
+        Intent i = new Intent(this, Menu_Principal.class);
+        startActivity(i);
     }
     public void Register (View view){
         try {
@@ -85,18 +90,12 @@ public class register extends AppCompatActivity {
     private void cargarDatos()
     {
         try{
-            String defau ="No establecido";
             String Nombre= nombre.getText().toString().trim();
             String Edad= edad.getText().toString().trim();
             String Ciudad= ciudad.getText().toString().trim();
             String Correo= email.getText().toString().trim();
-            String Peso= defau;
-            String Imc= defau;
-            String estatura=defau;
-            String enfermedades=defau;
-            String talla= defau;
             //Upload datos
-            variables upload= new variables(Nombre, Correo, Edad, Ciudad, Peso, Imc, estatura, enfermedades, talla);
+            variables upload= new variables(Nombre, Edad, Correo, Ciudad);
             FirebaseDatabase database = FirebaseDatabase.getInstance();
             DatabaseReference myRef = database.getReference("Usuarios/"+ uid + "/Datos básicos/");
             myRef.setValue(upload);
