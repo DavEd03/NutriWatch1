@@ -2,14 +2,14 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/seguimient_al"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#BED9BA"
     tools:context=".Notification">
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/recomenaciones"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
@@ -56,18 +56,20 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/regis"
+        android:id="@+id/REGRESAR"
         android:layout_width="323dp"
         android:layout_height="46dp"
-        android:layout_marginEnd="44dp"
         android:layout_marginBottom="72dp"
-        android:backgroundTint="#AFE198"
+        android:backgroundTint="#77A676"
         android:onClick="MenuP"
         android:text="Regresar a la Pantalla Principal"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="356dp"
         android:layout_height="448dp"
         android:background="#77A676"
@@ -80,9 +82,9 @@
         app:layout_constraintVertical_bias="0.498">
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/E"
             android:layout_width="match_parent"
-            android:layout_height="85dp"
+            android:layout_height="50dp"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="15dp"
             android:gravity="center_horizontal"
@@ -90,6 +92,10 @@
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="15dp" />
+
+        <ListView
+            android:layout_width="345dp"
+            android:layout_height="320dp" />
 
     </LinearLayout>
 
@@ -103,6 +109,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/user"
         android:onClick="User"/>
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="267dp"
+        android:layout_height="228dp"
+        android:layout_marginBottom="596dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:srcCompat="@mipmap/nutriasset_foreground" />
+
 
 
 

@@ -2,11 +2,26 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/seguimient_al"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#BED9BA"
-    tools:context=".Menu_Principal">
+    tools:context=".Menu_Principal"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="-70dp">
+
+    <TextView
+        android:id="@+id/recomenaciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Menu principal"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
@@ -31,9 +46,9 @@
         android:layout_height="wrap_content"
         android:background="#267331"
         android:gravity="center_horizontal"
-        android:text=""
+
         android:textAlignment="center"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="35dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,42 +67,14 @@
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.107">
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="match_parent"
-            android:layout_height="85dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="15dp"
-            android:gravity="center_horizontal"
-            android:text="Informacion sobre el Planificador de Comidas
-Recordatorios de Hidratación y Comidas"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="15dp" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="352dp"
-        android:layout_height="124dp"
-        android:background="#77A676"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.349">
+        app:layout_constraintVertical_bias="0.499">
 
         <TextView
             android:id="@+id/textView5"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="15dp"
+            android:layout_height="107dp"
             android:gravity="center_horizontal"
+            android:onClick="seguimiento_ali"
             android:text="Informacion acerca del seguimiento de Calorias  Nutrientes y Alimentos"
             android:textAlignment="center"
             android:textColor="@color/black"
@@ -95,6 +82,7 @@ Recordatorios de Hidratación y Comidas"
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout3"
         android:layout_width="352dp"
         android:layout_height="124dp"
         android:background="#77A676"
@@ -104,15 +92,16 @@ Recordatorios de Hidratación y Comidas"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.573">
+        app:layout_constraintVertical_bias="0.252">
 
         <TextView
             android:id="@+id/textView6"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="108dp"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="15dp"
             android:gravity="center_horizontal"
+            android:onClick="control_S"
             android:text="Control de Salud"
             android:textAlignment="center"
             android:textColor="@color/black"
@@ -129,16 +118,17 @@ Recordatorios de Hidratación y Comidas"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.812">
+        app:layout_constraintVertical_bias="0.766">
 
         <TextView
             android:id="@+id/textView7"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="108dp"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="15dp"
             android:gravity="center_horizontal"
-            android:text="Registro de Ejercicios"
+            android:onClick="recomendaciones_ej"
+            android:text="Recomendacion de ejercicios"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="15dp" />
@@ -159,12 +149,38 @@ Recordatorios de Hidratación y Comidas"
         android:id="@+id/imageView5"
         android:layout_width="47dp"
         android:layout_height="44dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="16dp"
         android:onClick="User"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.956"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/user" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="142dp"
+        android:layout_height="48dp"
+        android:backgroundTint="#77A676"
+        android:text="Cerrar sesion"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.899" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="267dp"
+        android:layout_height="228dp"
+        android:layout_marginBottom="596dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:srcCompat="@mipmap/nutriasset_foreground" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

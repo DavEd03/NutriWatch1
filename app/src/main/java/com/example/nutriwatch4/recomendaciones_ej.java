@@ -10,13 +10,13 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class Confirm_Register extends AppCompatActivity {
+public class recomendaciones_ej extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_confirm_register);
+        setContentView(R.layout.activity_recomendaciones_ej);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -24,7 +24,7 @@ public class Confirm_Register extends AppCompatActivity {
         });
     }
     public void MenuP (View view){
-        Intent i = new Intent(this, MainActivity.class);
+        Intent i = new Intent(this, Menu_Principal.class);
         startActivity(i);
     }
 }
