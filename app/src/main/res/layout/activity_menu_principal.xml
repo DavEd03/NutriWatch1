@@ -162,8 +162,6 @@
         android:id="@+id/button3"
         android:layout_width="142dp"
         android:layout_height="48dp"
-        android:backgroundTint="#267331"
-        android:onClick="cerrar"
         android:backgroundTint="#77A676"
         android:text="Cerrar sesion"
         android:textColor="@color/black"
