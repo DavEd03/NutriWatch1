@@ -196,7 +196,20 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="10dp"></TableRow>
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_marginRight="20dp"
+                android:padding="8dp"
+
+                android:text="Ciudad:"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/edtCiudad"
+                android:layout_marginRight="10dp"
+                android:background="@color/white"
+                android:textColor="@color/black" />
+        </TableRow>
     </TableLayout>
 
     <TableLayout
@@ -222,7 +235,7 @@
                 android:layout_marginEnd="40dp"
                 android:layout_marginBottom="52dp"
                 android:backgroundTint="#BED9BA"
-                android:onClick="MenuP"
+                android:onClick="modificardatos"
                 android:text="Actualizar"
                 android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
