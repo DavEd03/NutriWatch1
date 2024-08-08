@@ -1,6 +1,8 @@
 package com.example.nutriwatch4;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -50,5 +52,9 @@ public class seguimiento_al extends AppCompatActivity {
         // Programar el AlarmManager
         AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
         alarmManager.setExact(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
+    }
+    public void control_S(View view){
+        Intent cambio= new Intent(this, control_salud.class);
+        startActivity(cambio);
     }
 }

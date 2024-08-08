@@ -31,9 +31,9 @@
         android:layout_height="wrap_content"
         android:background="#267331"
         android:gravity="center_horizontal"
-        android:text="NutriWatch"
+        android:text=""
         android:textAlignment="center"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="35dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -54,7 +54,7 @@
         app:layout_constraintVertical_bias="0.677">
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/E"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
@@ -62,7 +62,7 @@
             android:gravity="center_horizontal"
             android:text="Usuario/Correo"
             android:textAlignment="center"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="20dp" />
 
         <EditText
@@ -86,7 +86,7 @@
             android:gravity="center_horizontal"
             android:text="Contraseña"
             android:textAlignment="center"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="20dp" />
 
         <EditText
@@ -111,7 +111,8 @@
             android:layout_marginBottom="20dp"
             android:backgroundTint="#AFE198"
             android:onClick="MenuP"
-            android:text="Acceder" />
+            android:text="Acceder"
+            android:textColor="@color/black" />
 
         <TextView
             android:id="@+id/textView6"
@@ -122,7 +123,7 @@
             android:gravity="center_horizontal"
             android:text="¿No Tienes Cuenta?"
             android:textAlignment="center"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="20dp" />
 
         <Button
@@ -132,8 +133,9 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:backgroundTint="#AFE198"
+            android:onClick="Registro"
             android:text="Crear Cuenta"
-            android:onClick="Registro"/>
+            android:textColor="@color/black" />
     </LinearLayout>
 
     <TextView
@@ -148,4 +150,14 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="267dp"
+        android:layout_height="228dp"
+        android:layout_marginBottom="596dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:srcCompat="@mipmap/nutriasset_foreground" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

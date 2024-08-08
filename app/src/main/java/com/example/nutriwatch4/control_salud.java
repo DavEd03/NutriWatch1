@@ -22,11 +22,10 @@ public class control_salud extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
-
-
     }
-
-
+    public void MenuP (View view){
+        Intent i = new Intent(this, Menu_Principal.class);
+        startActivity(i);
+    }
 
 }

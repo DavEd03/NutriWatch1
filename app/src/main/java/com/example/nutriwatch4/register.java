@@ -1,5 +1,6 @@
 package com.example.nutriwatch4;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -41,12 +42,16 @@ public class register extends AppCompatActivity {
         email=(EditText)findViewById(R.id.correo);
         edad=(EditText)findViewById(R.id.fec_nac);
         ciudad=(EditText)findViewById(R.id.city);
-        regis=(Button) findViewById(R.id.regis);
+        regis=(Button) findViewById(R.id.REGRESAR);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.seguimient_al), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+    public void MenuP (View view){
+        Intent i = new Intent(this, Menu_Principal.class);
+        startActivity(i);
     }
     public void Register (View view){
         try {
