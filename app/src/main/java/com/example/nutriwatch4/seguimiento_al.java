@@ -40,8 +40,8 @@ public class seguimiento_al extends AppCompatActivity {
         // Configurar el tiempo para la notificación (por ejemplo, 8:00 AM del día siguiente)
         Calendar calendar = Calendar.getInstance();
         calendar.setTimeInMillis(System.currentTimeMillis());
-        calendar.set(Calendar.HOUR_OF_DAY, 10);
-        calendar.set(Calendar.MINUTE, 15);
+        calendar.set(Calendar.HOUR_OF_DAY, 12);
+        calendar.set(Calendar.MINUTE, 30);
         calendar.set(Calendar.SECOND, 0);
 
         if (calendar.getTimeInMillis() < System.currentTimeMillis()) {
