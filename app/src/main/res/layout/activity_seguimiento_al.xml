@@ -48,7 +48,7 @@
         android:layout_height="wrap_content"
         android:background="#267331"
         android:gravity="center_horizontal"
-        android:text="NutriWatch"
+        android:text=""
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="35dp"
@@ -246,18 +246,18 @@
         android:layout_width="319dp"
         android:layout_height="42dp"
         android:backgroundTint="#77A676"
-        android:onClick="agregar_com"
+        android:onClick="Agg_comida"
         android:text="Actualizar"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.888" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button1"
         android:layout_width="318dp"
         android:layout_height="42dp"
         android:backgroundTint="#77A676"
@@ -270,5 +270,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView"
         app:layout_constraintVertical_bias="0.812" />
-
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="185dp"
+        android:layout_height="101dp"
+        android:layout_marginBottom="772dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@mipmap/bann_nutri_background" />
 </androidx.constraintlayout.widget.ConstraintLayout>
