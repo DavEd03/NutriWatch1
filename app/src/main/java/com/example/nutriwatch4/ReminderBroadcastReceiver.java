@@ -32,7 +32,7 @@ public class ReminderBroadcastReceiver extends BroadcastReceiver{
 
         // Crear un Intent que se abrirá cuando se haga clic en la notificación
         Intent activityIntent = new Intent(context, MainActivity.class);
-        PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, activityIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+        PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, activityIntent, PendingIntent.FLAG_MUTABLE);
 
         builder.setContentIntent(pendingIntent);
 
