@@ -57,4 +57,7 @@ public class seguimiento_al extends AppCompatActivity {
         Intent cambio= new Intent(this, control_salud.class);
         startActivity(cambio);
     }
-}
+    public void agregar_com (View view){
+        Intent i= new Intent(this, agregar_comida.class);
+        startActivity(i);
+}}

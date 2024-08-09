@@ -46,15 +46,16 @@
         android:id="@+id/regresar"
         android:layout_width="343dp"
         android:layout_height="52dp"
-        android:backgroundTint="#BED9BA"
+        android:backgroundTint="#77A676"
         android:onClick="MenuP"
         android:text="Regresar a la Pantalla Principal"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.617"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.899" />
+        app:layout_constraintVertical_bias="0.891" />
 
     <TextView
         android:id="@+id/recomenaciones"
@@ -230,38 +231,6 @@
             android:layout_marginTop="10dp"></TableRow>
     </TableLayout>
 
-    <TableLayout
-        android:layout_width="348dp"
-        android:layout_height="80dp"
-        android:layout_marginBottom="136dp"
-        android:background="#77A676"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_marginTop="10dp">
-
-            <Button
-                android:layout_width="332dp"
-                android:layout_height="45dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginEnd="40dp"
-                android:layout_marginBottom="52dp"
-                android:backgroundTint="#BED9BA"
-                android:onClick="MenuP"
-                android:text="Actualizar"
-                android:textColor="@color/black"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent">
-
-            </Button>
-        </TableRow>
-    </TableLayout>
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="267dp"
@@ -272,6 +241,21 @@
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:srcCompat="@mipmap/nutriasset_foreground" />
 
+    <Button
+        android:layout_width="343dp"
+        android:layout_height="54dp"
+        android:backgroundTint="#77A676"
+        android:onClick="MenuP"
+        android:text="Actualizar"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.617"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.803">
+
+    </Button>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
