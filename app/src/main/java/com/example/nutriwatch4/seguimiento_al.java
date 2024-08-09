@@ -14,6 +14,7 @@ import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -27,7 +28,8 @@ import java.util.Calendar;
 
 public class seguimiento_al extends AppCompatActivity {
     FirebaseAuth mAuth;
-    String userId, usercorreo;
+    String userId;
+    EditText edtAlmuerzo, edtCol1, edtCol2, edtComida, edtCena;
     private DatabaseReference databaseReference;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,30 +42,57 @@ public class seguimiento_al extends AppCompatActivity {
             return insets;
 
         });
+
+        edtAlmuerzo=findViewById(R.id.edtAlmuerzo);
+        edtCol1=findViewById(R.id.edtCol1);
+        edtCol2=findViewById(R.id.edtCol2);
+        edtComida=findViewById(R.id.edtComida);
+        edtCena=findViewById(R.id.edtCena);
         mAuth= FirebaseAuth.getInstance();
         Bundle datos= getIntent().getExtras();
         userId= datos.getString("nUsuario");
-        databaseReference = FirebaseDatabase.getInstance().getReference("Usuarios").child(userId).child("Datos básicos");
         // En tu actividad o fragmento
-        scheduleNotification(this);
+       // scheduleNotification(this);
 
     }
     @Override
     protected void onStart(){
         super.onStart();
+        String dayOfWeek = getDayOfWeekName();
+        databaseReference = FirebaseDatabase.getInstance().getReference("Usuarios").child(userId).child("Comidas").child(dayOfWeek);
         if (databaseReference != null) {
             // Escuchar los datos de Firebase
             databaseReference.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    String almuerzo = dataSnapshot.child("almuerzo").getValue(String.class);
+                    String colacion1 = dataSnapshot.child("colacion1").getValue(String.class);
+                    String colacion2 = dataSnapshot.child("colacion2").getValue(String.class);
+                    String comida = dataSnapshot.child("comida").getValue(String.class);
+                    String cena = dataSnapshot.child("cena").getValue(String.class);
+                    //String total = dataSnapshot.child("total").getValue(String.class);
+
+                    edtAlmuerzo.setText(almuerzo);
+                    edtCol1.setText(colacion1);
+                    edtCol2.setText(colacion2);
+                    edtComida.setText(comida);
+                    edtCena.setText(cena);
+                    //Toast.makeText(seguimiento_al.this, "Para el almuerzo: "+almuerzo,Toast.LENGTH_SHORT).show();
                 }
 
                 @Override
                 public void onCancelled(@NonNull DatabaseError error) {
-
+                    Toast.makeText(seguimiento_al.this, "Error al obtener la información del usuario, intente más tarde",Toast.LENGTH_SHORT).show();
                 }
             });
         }
+    }
+    public String getDayOfWeekName() {
+        Calendar calendar = Calendar.getInstance();
+        int dayOfWeek = calendar.get(Calendar.DAY_OF_WEEK);
+
+        String[] days = {"Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"};
+        return days[dayOfWeek - 1]; // Convertir el número en el nombre del día
     }
     public void scheduleNotification(Context context) {
         // Crear un Intent para el BroadcastReceiver
