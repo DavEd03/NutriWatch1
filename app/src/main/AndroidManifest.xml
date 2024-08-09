@@ -19,11 +19,6 @@
             android:exported="false" />
 
 
-
-        <activity
-            android:name=".centro_noti"
-            android:exported="false" />
-
         <activity
             android:name=".control_salud"
             android:exported="false" />
