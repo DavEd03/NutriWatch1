@@ -11,7 +11,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class Notification extends AppCompatActivity {
-
+    String userId;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +22,8 @@ public class Notification extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        Bundle datos= getIntent().getExtras();
+        userId= datos.getString("nUsuario");
     }
     public void MenuP (View view){
         Intent i = new Intent(this, Menu_Principal.class);
@@ -29,6 +31,7 @@ public class Notification extends AppCompatActivity {
     }
     public void User (View view){
         Intent i = new Intent(this, Usuario.class);
+        i.putExtra("nUsuario",userId);
         startActivity(i);
     }
 }

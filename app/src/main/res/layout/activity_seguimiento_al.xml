@@ -48,7 +48,7 @@
         android:layout_height="wrap_content"
         android:background="#267331"
         android:gravity="center_horizontal"
-        android:text="NutriWatch"
+        android:text=""
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="35dp"
@@ -249,5 +249,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.688" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="185dp"
+        android:layout_height="101dp"
+        android:layout_marginBottom="772dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@mipmap/bann_nutri_background" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -105,10 +105,10 @@
         android:layout_height="40dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="16dp"
+        android:onClick="User"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/user"
-        android:onClick="User"/>
+        app:srcCompat="@drawable/user" />
 
     <ImageView
         android:id="@+id/imageView7"

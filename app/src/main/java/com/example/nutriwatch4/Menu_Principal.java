@@ -52,6 +52,7 @@ public class Menu_Principal extends AppCompatActivity {
     }
     public void Notificacion (View view){
         Intent i = new Intent(this, Notification.class);
+        i.putExtra("nUsuario",userId);
         startActivity(i);
     }
     public void User (View view){
