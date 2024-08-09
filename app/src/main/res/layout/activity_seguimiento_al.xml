@@ -97,7 +97,7 @@
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/editTextText"
+            android:id="@+id/edtAlmuerzo"
             android:layout_width="match_parent"
             android:layout_height="37dp"
             android:background="@color/white"
@@ -118,7 +118,7 @@
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/editTextText2"
+            android:id="@+id/edtCol1"
             android:layout_width="match_parent"
             android:layout_height="37dp"
             android:background="@color/white"
@@ -137,7 +137,7 @@
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/editTextText3"
+            android:id="@+id/edtComida"
             android:layout_width="match_parent"
             android:layout_height="37dp"
             android:background="@color/white"
@@ -157,7 +157,7 @@
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/editTextText4"
+            android:id="@+id/edtCol2"
             android:layout_width="match_parent"
             android:layout_height="37dp"
             android:background="@color/white"
@@ -176,7 +176,7 @@
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/editTextText5"
+            android:id="@+id/edtCena"
             android:layout_width="match_parent"
             android:layout_height="37dp"
             android:background="@color/white"

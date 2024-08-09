@@ -71,6 +71,7 @@ public class Menu_Principal extends AppCompatActivity {
     }
     public void seguimiento_ali(View view){
         Intent i= new Intent(this, seguimiento_al.class);
+        i.putExtra("nUsuario",userId);
         startActivity(i);
     }
     public void cerrar(View v){
