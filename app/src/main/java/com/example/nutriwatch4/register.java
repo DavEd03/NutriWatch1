@@ -23,6 +23,8 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.Calendar;
+
 public class register extends AppCompatActivity {
     FirebaseAuth mAuth;
     EditText nombre;
@@ -115,5 +117,23 @@ public class register extends AppCompatActivity {
             Toast.makeText(register.this,"Error en: "+e2.getMessage(),Toast.LENGTH_LONG).show();
         }
     }
+    public String getDayOfWeekName() {
+        Calendar calendar = Calendar.getInstance();
+        int dayOfWeek = calendar.get(Calendar.DAY_OF_WEEK);
 
+        String[] days = {"Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"};
+        return days[dayOfWeek - 1]; // Convertir el número en el nombre del día
+    }
+    private void agendarComida(){
+        String dayOfWeek = getDayOfWeekName();
+        String almuerzo="";
+        String colacion1="";
+        String comida="";
+        String colacion2="";
+        String cena="";
+        int Total = 0;
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("Usuarios/"+ uid + "/Comidas/"+dayOfWeek+"/");
+        //myRef.setValue();
+    }
 }
