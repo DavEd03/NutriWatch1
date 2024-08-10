@@ -15,24 +15,37 @@ public class ReminderBroadcastReceiver extends BroadcastReceiver{
     public void onReceive(Context context, Intent intent) {
         // Crear un canal de notificación para Android O y superior
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            NotificationChannel channel = new NotificationChannel("reminder_channel", "Reminder Channel", NotificationManager.IMPORTANCE_DEFAULT);
+            NotificationChannel channel = new NotificationChannel(
+                    "reminder_channel",
+                    "Reminder Channel",
+                    NotificationManager.IMPORTANCE_DEFAULT
+            );
             NotificationManager manager = context.getSystemService(NotificationManager.class);
             manager.createNotificationChannel(channel);
         }
+
         Uri soundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         long[] vibrationPattern = {0, 500, 1000, 500};
+
         // Crear la notificación
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context, "reminder_channel")
                 .setSmallIcon(R.drawable.notification)
                 .setContentTitle("Recordatorio")
                 .setContentText("¡Es Hora de Almorzar!")
                 .setAutoCancel(true)
-                 .setSound(soundUri)
+                .setSound(soundUri)
                 .setVibrate(vibrationPattern);
 
         // Crear un Intent que se abrirá cuando se haga clic en la notificación
         Intent activityIntent = new Intent(context, MainActivity.class);
-        PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, activityIntent, PendingIntent.FLAG_MUTABLE);
+
+        // Verificar la versión de Android para aplicar la bandera correcta
+        PendingIntent pendingIntent;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            pendingIntent = PendingIntent.getActivity(context, 0, activityIntent, PendingIntent.FLAG_IMMUTABLE);
+        } else {
+            pendingIntent = PendingIntent.getActivity(context, 0, activityIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+        }
 
         builder.setContentIntent(pendingIntent);
 
@@ -40,4 +53,5 @@ public class ReminderBroadcastReceiver extends BroadcastReceiver{
         NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
         notificationManager.notify(1, builder.build());
     }
+
 }
