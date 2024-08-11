@@ -53,7 +53,7 @@ public class seguimiento_al extends AppCompatActivity {
         Bundle datos= getIntent().getExtras();
         userId= datos.getString("nUsuario");
         // En tu actividad o fragmento
-       // scheduleNotification(this);
+        scheduleMealNotifications();
 
     }
     @Override
