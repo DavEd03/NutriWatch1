@@ -1,6 +1,7 @@
 package com.example.nutriwatch4;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 
@@ -94,26 +95,65 @@ public class seguimiento_al extends AppCompatActivity {
         String[] days = {"Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"};
         return days[dayOfWeek - 1]; // Convertir el número en el nombre del día
     }
-    public void scheduleNotification(Context context) {
-        // Crear un Intent para el BroadcastReceiver
-        Intent intent = new Intent(context, ReminderBroadcastReceiver.class);
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
-
-        // Configurar el tiempo para la notificación (por ejemplo, 8:00 AM del día siguiente)
+    private void scheduleMealNotifications() {
         Calendar calendar = Calendar.getInstance();
-        calendar.setTimeInMillis(System.currentTimeMillis());
-        calendar.set(Calendar.HOUR_OF_DAY, 12);
-        calendar.set(Calendar.MINUTE, 30);
-        calendar.set(Calendar.SECOND, 0);
+        long currentTime = System.currentTimeMillis();
 
-        if (calendar.getTimeInMillis() < System.currentTimeMillis()) {
-            // Si la hora programada ya ha pasado hoy, establece la notificación para el mismo tiempo al día siguiente
-            calendar.add(Calendar.DAY_OF_YEAR, 1);
+        // Desayuno: 8:00 AM
+        calendar.set(Calendar.HOUR_OF_DAY, 8);
+        calendar.set(Calendar.MINUTE, 0);
+        calendar.set(Calendar.SECOND, 0);
+        if (calendar.getTimeInMillis() > currentTime) {
+            setAlarm(this, calendar.getTimeInMillis(), 1, "Desayuno", "¡Es hora de desayunar!");
         }
 
-        // Programar el AlarmManager
+        // Almuerzo: 1:00 PM
+        calendar.set(Calendar.HOUR_OF_DAY, 10);
+        calendar.set(Calendar.MINUTE, 30);
+        if (calendar.getTimeInMillis() > currentTime) {
+            setAlarm(this, calendar.getTimeInMillis(), 2, "Almuerzo", "¡Es hora de almorzar!");
+        }
+
+        // Merienda: 4:00 PM
+        calendar.set(Calendar.HOUR_OF_DAY, 14);
+        calendar.set(Calendar.MINUTE, 30);
+        if (calendar.getTimeInMillis() > currentTime) {
+            setAlarm(this, calendar.getTimeInMillis(), 3, "Merienda", "¡Es hora de la merienda!");
+        }
+
+        // Cena: 7:00 PM
+        calendar.set(Calendar.HOUR_OF_DAY, 23);
+        calendar.set(Calendar.MINUTE, 23);
+        if (calendar.getTimeInMillis() > currentTime) {
+            setAlarm(this, calendar.getTimeInMillis(), 4, "Cena", "¡Es hora de cenar!");
+        }
+
+        // Snack nocturno: 9:00 PM
+        calendar.set(Calendar.HOUR_OF_DAY, 23);
+        calendar.set(Calendar.MINUTE, 24);
+        if (calendar.getTimeInMillis() > currentTime) {
+            setAlarm(this, calendar.getTimeInMillis(), 5, "Snack nocturno", "¡Es hora del snack nocturno!");
+        }
+    }
+
+    private void setAlarm(Context context, long triggerTime, int requestCode, String title, String message) {
         AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
-        alarmManager.setExact(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
+
+        Intent intent = new Intent(context, ReminderBroadcastReceiver.class);
+        intent.putExtra("title", title);
+        intent.putExtra("message", message);
+        intent.putExtra("requestCode", requestCode);
+
+        PendingIntent pendingIntent;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            pendingIntent = PendingIntent.getBroadcast(context, requestCode, intent, PendingIntent.FLAG_IMMUTABLE);
+        } else {
+            pendingIntent = PendingIntent.getBroadcast(context, requestCode, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        }
+
+        if (alarmManager != null) {
+            alarmManager.setExact(AlarmManager.RTC_WAKEUP, triggerTime, pendingIntent);
+        }
     }
     public void control_S(View view){
         Intent cambio= new Intent(this, control_salud.class);
