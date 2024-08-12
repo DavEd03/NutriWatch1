@@ -100,8 +100,8 @@ public class seguimiento_al extends AppCompatActivity {
         long currentTime = System.currentTimeMillis();
 
         // Desayuno: 8:00 AM
-        calendar.set(Calendar.HOUR_OF_DAY, 8);
-        calendar.set(Calendar.MINUTE, 0);
+        calendar.set(Calendar.HOUR_OF_DAY, 10);
+        calendar.set(Calendar.MINUTE, 4);
         calendar.set(Calendar.SECOND, 0);
         if (calendar.getTimeInMillis() > currentTime) {
             setAlarm(this, calendar.getTimeInMillis(), 1, "Desayuno", "¡Es hora de desayunar!");
@@ -109,7 +109,7 @@ public class seguimiento_al extends AppCompatActivity {
 
         // Almuerzo: 1:00 PM
         calendar.set(Calendar.HOUR_OF_DAY, 10);
-        calendar.set(Calendar.MINUTE, 30);
+        calendar.set(Calendar.MINUTE, 5);
         if (calendar.getTimeInMillis() > currentTime) {
             setAlarm(this, calendar.getTimeInMillis(), 2, "Almuerzo", "¡Es hora de almorzar!");
         }
