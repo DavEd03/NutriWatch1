@@ -102,30 +102,35 @@ public class register extends AppCompatActivity {
             String estatura=defau;
             String enfermedades=defau;
             String talla= defau;
+            if(Nombre.isEmpty()){
+                nombre.setText("Introduzca un valor válido");
+            }else if(Edad.isEmpty()){
+                edad.setText("Introduzca un valor válido");
+            }else if(Ciudad.isEmpty()){
+                ciudad.setText("Introduzca un valor válido");
+            }else if(Correo.isEmpty()){
+                email.setText("Introduzca un valor válida");
+            }else{
             //Upload datos
             variables upload= new variables(Nombre, Correo, Edad, Ciudad, Peso, Imc, estatura, enfermedades, talla);
             FirebaseDatabase database = FirebaseDatabase.getInstance();
             DatabaseReference myRef = database.getReference("Usuarios/"+ uid + "/Datos básicos/");
             myRef.setValue(upload);
             Toast.makeText(register.this,"Usuario registrado correctamente",Toast.LENGTH_LONG).show();
+            crearficha();
             nombre.setText("");
             edad.setText("");
             ciudad.setText("");
             email.setText("");
             contra.setText("");
+            }
         }catch (Exception e2){
             Toast.makeText(register.this,"Error en: "+e2.getMessage(),Toast.LENGTH_LONG).show();
         }
     }
-    public String getDayOfWeekName() {
-        Calendar calendar = Calendar.getInstance();
-        int dayOfWeek = calendar.get(Calendar.DAY_OF_WEEK);
 
-        String[] days = {"Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"};
-        return days[dayOfWeek - 1]; // Convertir el número en el nombre del día
-    }
-    private void agendarComida(){
-        String dayOfWeek = getDayOfWeekName();
+    private void crearficha(){
+
         String almuerzo="";
         String colacion1="";
         String comida="";
@@ -133,7 +138,7 @@ public class register extends AppCompatActivity {
         String cena="";
         int Total = 0;
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("Usuarios/"+ uid + "/Comidas/"+dayOfWeek+"/");
+        DatabaseReference myRef = database.getReference("Usuarios/"+ uid + "/Datos medicos/");
         //myRef.setValue();
     }
 }

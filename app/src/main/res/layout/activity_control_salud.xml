@@ -57,7 +57,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:layout_width="296dp"
+        android:layout_width="350dp"
         android:layout_height="563dp"
         android:background="#77A676"
         android:orientation="vertical"
@@ -68,107 +68,159 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.529">
 
-        <TextView
-            android:id="@+id/textView16"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:text="Numero de control Medico "
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="16sp" />
+        <TableLayout
+            android:id="@+id/info"
+            android:layout_width="348dp"
+            android:layout_height="415dp"
+            android:background="#77A676"
+            android:stretchColumns="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.507"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.348">
 
-        <EditText
-            android:id="@+id/editTextText6"
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:layout_marginTop="10dp"
-            android:autoText="false"
-            android:background="@color/white"
-            android:ems="10"
-            android:inputType="text"
-            android:textColor="#000000" />
+            <TableRow android:layout_marginTop="20dp">
 
-        <TextView
-            android:id="@+id/textView18"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Comidas cronometradas"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="17dp" />
+                <TextView
+                    android:layout_marginRight="20dp"
+                    android:padding="8dp"
 
-        <EditText
-            android:id="@+id/editTextText7"
-            android:layout_width="match_parent"
-            android:layout_height="37dp"
-            android:layout_marginTop="10dp"
-            android:background="@color/white"
-            android:ems="10"
-            android:inputType="text"
-            android:textColor="#000000" />
+                    android:text="Identificador Médico:"
+                    android:textColor="@color/black" />
 
-        <TextView
-            android:id="@+id/textView17"
-            android:layout_width="match_parent"
-            android:layout_height="33dp"
-            android:layout_marginTop="10dp"
-            android:text="Altura"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="17dp" />
+                <EditText
+                    android:id="@+id/edtNMedico"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/white"
+                    android:clickable="false"
+                    android:editable="false"
+                    android:inputType="number"
+                    android:textColor="@color/black" />
+            </TableRow>
 
-        <EditText
-            android:id="@+id/editTextText8"
-            android:layout_width="match_parent"
-            android:layout_height="37dp"
-            android:layout_marginTop="10dp"
-            android:background="@color/white"
-            android:ems="10"
-            android:inputType="text"
-            android:textColor="#000000" />
+            <TableRow android:layout_marginTop="10dp">
 
-        <TextView
-            android:id="@+id/textView19"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:paddingTop="15dp"
-            android:text="Enfermedades"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="17dp" />
+                <TextView
+                    android:layout_marginRight="20dp"
+                    android:padding="8dp"
 
-        <EditText
-            android:id="@+id/editTextText9"
-            android:layout_width="match_parent"
-            android:layout_height="37dp"
-            android:layout_marginTop="10dp"
-            android:background="@color/white"
-            android:ems="10"
-            android:inputType="text"
-            android:textColor="#000000" />
+                    android:text="Comidas cronometradas:"
+                    android:textColor="@color/black" />
 
-        <TextView
-            android:id="@+id/textView20"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Peso"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="17dp" />
+                <EditText
+                    android:id="@+id/edtcomidas"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/white"
+                    android:textColor="@color/black"
+                    android:inputType="number"/>
+            </TableRow>
 
-        <EditText
-            android:id="@+id/editTextText10"
-            android:layout_width="match_parent"
-            android:layout_height="37dp"
-            android:layout_marginTop="10dp"
-            android:background="@color/white"
-            android:ems="10"
-            android:inputType="text"
-            android:textColor="#000000" />
+            <TableRow android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_marginRight="20dp"
+                    android:padding="8dp"
+
+                    android:text="Enfermedades"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/edtEnfer"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/white"
+                    android:textColor="@color/black"
+                    android:inputType="text"/>
+            </TableRow>
+
+            <TableRow android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_marginRight="20dp"
+                    android:padding="8dp"
+
+                    android:text="Calorías Consumidas:"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/edtTotalC"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/white"
+                    android:textColor="@color/black"
+                    android:inputType="number"/>
+            </TableRow>
+
+            <TableRow android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_marginRight="20dp"
+                    android:padding="8dp"
+
+                    android:text="Medicamentos"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/edtmedicina"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/white"
+                    android:textColor="@color/black"
+                    android:inputType="text"/>
+            </TableRow>
+
+            <TableRow android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_marginRight="20dp"
+                    android:padding="8dp"
+
+                    android:text="Telefono"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/edtNumber"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/white"
+                    android:textColor="@color/black"
+                    android:inputType="number"/>
+            </TableRow>
+
+            <TableRow android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_marginRight="20dp"
+                    android:padding="8dp"
+
+                    android:text="Enfermedades:"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/edtEnf"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/white"
+                    android:textColor="@color/black"
+                    android:inputType="text"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_marginRight="20dp"
+                    android:padding="8dp"
+
+                    android:text="Nutriólogo:"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/edtnutri"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/white"
+                    android:textColor="@color/black"
+                    android:inputType="text"/>
+            </TableRow>
+        </TableLayout>
 
         <Button
             android:id="@+id/button2"
