@@ -125,5 +125,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@mipmap/bann_nutri_background" />
 
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="76dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/comeback" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
