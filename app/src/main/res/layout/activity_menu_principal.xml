@@ -16,6 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
         android:text="Menu principal"
+        android:fontFamily="@font/anek_devanagari_medium"
         android:textColor="@color/black"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -60,7 +61,8 @@
     <LinearLayout
         android:layout_width="352dp"
         android:layout_height="124dp"
-        android:background="#77A676"
+        android:background="@drawable/corner"
+
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -75,6 +77,7 @@
             android:layout_height="107dp"
             android:gravity="center_horizontal"
             android:onClick="seguimiento_ali"
+            android:fontFamily="@font/anek_devanagari_medium"
             android:text="Informacion acerca del seguimiento de Calorias  Nutrientes y Alimentos"
             android:textAlignment="center"
             android:textColor="@color/black"
@@ -84,8 +87,10 @@
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="352dp"
+
         android:layout_height="124dp"
-        android:background="#77A676"
+        android:background="@drawable/corner"
+
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -102,6 +107,7 @@
             android:layout_marginBottom="15dp"
             android:gravity="center_horizontal"
             android:onClick="control_S"
+            android:fontFamily="@font/anek_devanagari_medium"
             android:text="Control de Salud"
             android:textAlignment="center"
             android:textColor="@color/black"
@@ -111,7 +117,8 @@
     <LinearLayout
         android:layout_width="352dp"
         android:layout_height="124dp"
-        android:background="#77A676"
+        android:background="@drawable/corner"
+
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -127,6 +134,7 @@
             android:layout_marginTop="15dp"
             android:layout_marginBottom="15dp"
             android:gravity="center_horizontal"
+            android:fontFamily="@font/anek_devanagari_medium"
             android:onClick="recomendaciones_ej"
             android:text="Recomendacion de ejercicios"
             android:textAlignment="center"
@@ -166,6 +174,7 @@
         android:onClick="cerrar"
         android:text="Cerrar sesion"
         android:textColor="@color/black"
+        android:fontFamily="@font/anek_devanagari_medium"
         app:layout_constraintBottom_toBottomOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -177,7 +186,7 @@
         android:id="@+id/imageView7"
         android:layout_width="185dp"
         android:layout_height="101dp"
-        android:layout_marginBottom="772dp"
+        android:layout_marginBottom="768dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -48,6 +48,7 @@
         android:layout_height="52dp"
         android:backgroundTint="#77A676"
         android:onClick="MenuP"
+        android:fontFamily="@font/anek_devanagari_medium"
         android:text="Regresar a la Pantalla Principal"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -62,6 +63,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
         android:text="Perfil de Usuario"
+        android:fontFamily="@font/anek_devanagari_medium"
         android:textColor="@color/black"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,7 +74,8 @@
         android:id="@+id/info"
         android:layout_width="348dp"
         android:layout_height="415dp"
-        android:background="#77A676"
+        android:background="@drawable/corner"
+
         android:stretchColumns="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -86,8 +89,9 @@
             <TextView
                 android:layout_marginRight="20dp"
                 android:padding="8dp"
-
+                android:fontFamily="@font/anek_devanagari_medium"
                 android:text="Nombre:"
+                android:textAlignment="center"
                 android:textColor="@color/black" />
 
             <EditText
@@ -102,8 +106,9 @@
             <TextView
                 android:layout_marginRight="20dp"
                 android:padding="8dp"
-
+                android:fontFamily="@font/anek_devanagari_medium"
                 android:text="Edad:"
+                android:textAlignment="center"
                 android:textColor="@color/black" />
 
             <EditText
@@ -118,8 +123,9 @@
             <TextView
                 android:layout_marginRight="20dp"
                 android:padding="8dp"
-
+                android:fontFamily="@font/anek_devanagari_medium"
                 android:text="Peso:"
+                android:textAlignment="center"
                 android:textColor="@color/black" />
 
             <EditText
@@ -134,7 +140,8 @@
             <TextView
                 android:layout_marginRight="20dp"
                 android:padding="8dp"
-
+                android:textAlignment="center"
+                android:fontFamily="@font/anek_devanagari_medium"
                 android:text="Talla:"
                 android:textColor="@color/black" />
 
@@ -150,7 +157,8 @@
             <TextView
                 android:layout_marginRight="20dp"
                 android:padding="8dp"
-
+                android:textAlignment="center"
+                android:fontFamily="@font/anek_devanagari_medium"
                 android:text="Estatura:"
                 android:textColor="@color/black" />
 
@@ -166,7 +174,8 @@
             <TextView
                 android:layout_marginRight="20dp"
                 android:padding="8dp"
-
+                android:textAlignment="center"
+                android:fontFamily="@font/anek_devanagari_medium"
                 android:text="IMC:"
                 android:textColor="@color/black" />
 
@@ -182,7 +191,8 @@
             <TextView
                 android:layout_marginRight="20dp"
                 android:padding="8dp"
-
+                android:textAlignment="center"
+                android:fontFamily="@font/anek_devanagari_medium"
                 android:text="Enfermedades:"
                 android:textColor="@color/black" />
 
@@ -201,7 +211,8 @@
             <TextView
                 android:layout_marginRight="20dp"
                 android:padding="8dp"
-
+                android:textAlignment="center"
+                android:fontFamily="@font/anek_devanagari_medium"
                 android:text="Ciudad:"
                 android:textColor="@color/black" />
 
@@ -221,6 +232,7 @@
         android:backgroundTint="#77A676"
         android:onClick="modificardatos"
         android:text="Actualizar"
+        android:fontFamily="@font/anek_devanagari_medium"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -232,7 +244,7 @@
         android:id="@+id/imageView7"
         android:layout_width="185dp"
         android:layout_height="101dp"
-        android:layout_marginBottom="772dp"
+        android:layout_marginBottom="768dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

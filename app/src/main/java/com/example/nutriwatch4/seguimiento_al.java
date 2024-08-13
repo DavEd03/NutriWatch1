@@ -1,5 +1,7 @@
 package com.example.nutriwatch4;
 
+import static androidx.core.content.ContextCompat.startActivity;
+
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -100,8 +102,8 @@ public class seguimiento_al extends AppCompatActivity {
         long currentTime = System.currentTimeMillis();
 
         // Desayuno: 8:00 AM
-        calendar.set(Calendar.HOUR_OF_DAY, 8);
-        calendar.set(Calendar.MINUTE, 0);
+        calendar.set(Calendar.HOUR_OF_DAY, 11);
+        calendar.set(Calendar.MINUTE, 57);
         calendar.set(Calendar.SECOND, 0);
         if (calendar.getTimeInMillis() > currentTime) {
             setAlarm(this, calendar.getTimeInMillis(), 1, "Desayuno", "¡Es hora de desayunar!");
@@ -123,14 +125,14 @@ public class seguimiento_al extends AppCompatActivity {
 
         // Cena: 7:00 PM
         calendar.set(Calendar.HOUR_OF_DAY, 23);
-        calendar.set(Calendar.MINUTE, 23);
+        calendar.set(Calendar.MINUTE, 59);
         if (calendar.getTimeInMillis() > currentTime) {
             setAlarm(this, calendar.getTimeInMillis(), 4, "Cena", "¡Es hora de cenar!");
         }
 
         // Snack nocturno: 9:00 PM
         calendar.set(Calendar.HOUR_OF_DAY, 23);
-        calendar.set(Calendar.MINUTE, 24);
+        calendar.set(Calendar.MINUTE, 59);
         if (calendar.getTimeInMillis() > currentTime) {
             setAlarm(this, calendar.getTimeInMillis(), 5, "Snack nocturno", "¡Es hora del snack nocturno!");
         }
@@ -159,7 +161,7 @@ public class seguimiento_al extends AppCompatActivity {
         Intent cambio= new Intent(this, control_salud.class);
         startActivity(cambio);
     }
-   /* public void Agg_comida (View view){
+    /*public void Agg_comida (View view){
         Intent i= new Intent(this, agregar_comida.class);
         startActivity(i);
     }*/
@@ -167,4 +169,9 @@ public class seguimiento_al extends AppCompatActivity {
         Intent i = new Intent(this, Menu_Principal.class);
         startActivity(i);
     }
-}
+    public void seguimiento_ali(View view){
+        Intent i= new Intent(this, seguimiento_al.class);
+        startActivity(i);
+    }
+
+    }

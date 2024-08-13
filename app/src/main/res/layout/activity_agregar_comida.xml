@@ -11,9 +11,11 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="348dp"
-        android:layout_height="404dp"
+        android:layout_height="440dp"
+        android:background="@drawable/corner"
+
         android:layout_marginEnd="15dp"
-        android:background="#77A676"
+
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,6 +30,8 @@
             android:layout_height="wrap_content"
             android:paddingTop="15dp"
             android:text="Almuerzo "
+            android:fontFamily="@font/anek_devanagari_medium"
+
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="20sp" />
@@ -48,6 +52,8 @@
             android:layout_height="wrap_content"
             android:paddingTop="15dp"
             android:text="Colacion"
+            android:fontFamily="@font/anek_devanagari_medium"
+
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textColorLink="#000000"
@@ -67,6 +73,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="15dp"
+            android:fontFamily="@font/anek_devanagari_medium"
+
             android:text="Comida"
             android:textAlignment="center"
             android:textColor="@color/black"
@@ -88,6 +96,8 @@
             android:layout_height="wrap_content"
             android:paddingTop="15dp"
             android:text="Colacion"
+            android:fontFamily="@font/anek_devanagari_medium"
+
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="20sp" />
@@ -108,6 +118,8 @@
             android:paddingTop="15dp"
             android:text="Cena"
             android:textAlignment="center"
+            android:fontFamily="@font/anek_devanagari_medium"
+
             android:textColor="@color/black"
             android:textSize="20sp" />
 
@@ -128,6 +140,8 @@
         android:layout_height="wrap_content"
         android:text="AGREGAR DIETA"
         android:textColor="@color/black"
+        android:fontFamily="@font/anek_devanagari_medium"
+
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -177,6 +191,8 @@
         android:backgroundTint="#77A676"
         android:onClick="seguimiento_ali"
         android:text="Regresar"
+        android:fontFamily="@font/anek_devanagari_medium"
+
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -191,6 +207,8 @@
         android:layout_height="42dp"
         android:backgroundTint="#77A676"
         android:text="Agregar"
+        android:fontFamily="@font/anek_devanagari_medium"
+
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -203,9 +221,29 @@
         android:id="@+id/imageView7"
         android:layout_width="185dp"
         android:layout_height="101dp"
-        android:layout_marginBottom="772dp"
+        android:layout_marginBottom="768dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@mipmap/bann_nutri_background" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginBottom="36dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/confirmar" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginBottom="144dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/regresar" />
 </androidx.constraintlayout.widget.ConstraintLayout>

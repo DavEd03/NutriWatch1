@@ -65,6 +65,7 @@
         android:layout_height="wrap_content"
         android:text="SEGUIMIENTO DE ALIMENTOS "
         android:textColor="@color/black"
+        android:fontFamily="@font/anek_devanagari_medium"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -76,8 +77,9 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="337dp"
-        android:layout_height="415dp"
-        android:background="#77A676"
+        android:layout_height="450dp"
+        android:background="@drawable/corner"
+
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -92,6 +94,7 @@
             android:layout_height="wrap_content"
             android:paddingTop="15dp"
             android:text="Almuerzo"
+            android:fontFamily="@font/anek_devanagari_medium"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="20sp" />
@@ -112,6 +115,7 @@
             android:layout_height="wrap_content"
             android:paddingTop="15dp"
             android:text="Colacion"
+            android:fontFamily="@font/anek_devanagari_medium"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textColorLink="#000000"
@@ -132,6 +136,7 @@
             android:layout_height="wrap_content"
             android:paddingTop="15dp"
             android:text="Comida"
+            android:fontFamily="@font/anek_devanagari_medium"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="20sp" />
@@ -152,6 +157,7 @@
             android:layout_height="wrap_content"
             android:paddingTop="15dp"
             android:text="Colacion"
+            android:fontFamily="@font/anek_devanagari_medium"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="20sp" />
@@ -171,6 +177,7 @@
             android:layout_height="wrap_content"
             android:paddingTop="15dp"
             android:text="Cena"
+            android:fontFamily="@font/anek_devanagari_medium"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="20sp" />
@@ -192,10 +199,10 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.955"
+        app:layout_constraintHorizontal_bias="0.972"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.229" />
+        app:layout_constraintVertical_bias="0.235" />
 
     <CheckBox
         android:id="@+id/checkBox2"
@@ -203,10 +210,10 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.955"
+        app:layout_constraintHorizontal_bias="0.972"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.344" />
+        app:layout_constraintVertical_bias="0.322" />
 
     <CheckBox
         android:id="@+id/checkBox3"
@@ -214,10 +221,10 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.955"
+        app:layout_constraintHorizontal_bias="0.972"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.465" />
+        app:layout_constraintVertical_bias="0.423" />
 
     <CheckBox
         android:id="@+id/checkBox4"
@@ -225,10 +232,10 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.955"
+        app:layout_constraintHorizontal_bias="0.972"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.569" />
+        app:layout_constraintVertical_bias="0.531" />
 
     <CheckBox
         android:id="@+id/checkBox5"
@@ -236,10 +243,10 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.955"
+        app:layout_constraintHorizontal_bias="0.972"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.688" />
+        app:layout_constraintVertical_bias="0.633" />
 
     <Button
         android:id="@+id/button7"
@@ -248,6 +255,7 @@
         android:backgroundTint="#77A676"
         android:onClick="Agg_comida"
         android:text="Actualizar"
+        android:fontFamily="@font/anek_devanagari_medium"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -263,6 +271,7 @@
         android:backgroundTint="#77A676"
         android:onClick="MenuP"
         android:text="Regresar"
+        android:fontFamily="@font/anek_devanagari_medium"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -274,7 +283,7 @@
         android:id="@+id/imageView7"
         android:layout_width="185dp"
         android:layout_height="101dp"
-        android:layout_marginBottom="772dp"
+        android:layout_marginBottom="768dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

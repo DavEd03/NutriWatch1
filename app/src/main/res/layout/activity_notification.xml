@@ -14,6 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
         android:text="Notificaciones"
+        android:fontFamily="@font/anek_devanagari_medium"
         android:textColor="@color/black"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -69,10 +70,12 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <LinearLayout
+        android:fontFamily="@font/anek_devanagari_medium"
         android:id="@+id/linearLayout2"
         android:layout_width="356dp"
         android:layout_height="448dp"
-        android:background="#77A676"
+        android:background="@drawable/corner"
+
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -88,6 +91,7 @@
             android:layout_marginTop="15dp"
             android:layout_marginBottom="15dp"
             android:gravity="center_horizontal"
+            android:fontFamily="@font/anek_devanagari_medium"
             android:text="Notificaciones de los elementos"
             android:textAlignment="center"
             android:textColor="@color/black"
@@ -95,7 +99,8 @@
 
         <ListView
             android:layout_width="345dp"
-            android:layout_height="320dp" />
+            android:layout_height="320dp"
+            android:fontFamily="@font/anek_devanagari_medium"/>
 
     </LinearLayout>
 
@@ -114,7 +119,7 @@
         android:id="@+id/imageView7"
         android:layout_width="185dp"
         android:layout_height="101dp"
-        android:layout_marginBottom="776dp"
+        android:layout_marginBottom="768dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

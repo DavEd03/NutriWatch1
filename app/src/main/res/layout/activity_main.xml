@@ -43,10 +43,11 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <LinearLayout
-        android:id="@+id/linearLayout4"
+        android:id="@+id/linearLayout5"
         android:layout_width="281dp"
+        android:background="@drawable/corner"
         android:layout_height="474dp"
-        android:background="#77A676"
+
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -62,6 +63,7 @@
             android:layout_marginBottom="15dp"
             android:gravity="center_horizontal"
             android:text="Usuario/Correo"
+            android:fontFamily="@font/anek_devanagari_medium"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="20dp" />
@@ -86,6 +88,7 @@
             android:layout_marginBottom="15dp"
             android:gravity="center_horizontal"
             android:text="Contraseña"
+            android:fontFamily="@font/anek_devanagari_medium"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="20dp" />
@@ -112,6 +115,7 @@
             android:layout_marginBottom="20dp"
             android:backgroundTint="#AFE198"
             android:onClick="MenuP"
+            android:fontFamily="@font/anek_devanagari_medium"
             android:text="Acceder"
             android:textColor="@color/black" />
 
@@ -122,6 +126,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
             android:gravity="center_horizontal"
+            android:fontFamily="@font/anek_devanagari_medium"
             android:text="¿No Tienes Cuenta?"
             android:textAlignment="center"
             android:textColor="@color/black"
@@ -134,32 +139,54 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:backgroundTint="#AFE198"
+            android:fontFamily="@font/anek_devanagari_medium"
             android:onClick="Registro"
             android:text="Crear Cuenta"
             android:textColor="@color/black" />
+
     </LinearLayout>
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="108dp"
+        android:layout_marginTop="80dp"
         android:text="Inicio de Sesion"
+        android:fontFamily="@font/anek_devanagari_medium"
         android:textColor="@color/black"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
     <ImageView
         android:id="@+id/imageView7"
         android:layout_width="185dp"
         android:layout_height="101dp"
-        android:layout_marginBottom="772dp"
+        android:layout_marginBottom="768dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@mipmap/bann_nutri_background" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="85dp"
+        android:layout_marginBottom="301dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/acceder" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="41dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="85dp"
+        android:layout_marginBottom="155dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/new_account" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
