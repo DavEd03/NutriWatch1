@@ -24,6 +24,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.UUID;
 
 public class register extends AppCompatActivity {
     FirebaseAuth mAuth;
@@ -130,15 +133,30 @@ public class register extends AppCompatActivity {
     }
 
     private void crearficha(){
+// Generar un ID médico único
+        String medicalId = UUID.randomUUID().toString();
+        String Comidas="No establecido";
+        String enfer="Sin datos";
+        String calorias="0";
+        String medicamento="Sin especificar";
+        String telefono="6751153832";
+        String nutriologo= "Dra. Pamela Perez ";
+        String numNutri="sin especificar";
 
-        String almuerzo="";
-        String colacion1="";
-        String comida="";
-        String colacion2="";
-        String cena="";
-        int Total = 0;
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("Usuarios/"+ uid + "/Datos medicos/");
-        //myRef.setValue();
+// Crear una referencia a la base de datos
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
+        fichaM datos= new fichaM(medicalId,Comidas,enfer,calorias,medicamento,telefono,nutriologo,numNutri);
+// Almacenar los datos médicos bajo el UID del usuario
+        databaseReference.child("Usuarios").child(uid).child("Datos_medicos").child(medicalId).setValue(datos)
+                .addOnCompleteListener(task -> {
+                    if (task.isSuccessful()) {
+                        // Datos médicos almacenados con éxito
+
+                    } else {
+                        // Manejar el error
+
+                    }
+                });
+
     }
 }
