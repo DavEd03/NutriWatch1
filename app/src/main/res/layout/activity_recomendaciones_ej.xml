@@ -26,7 +26,7 @@
         android:id="@+id/LAYAUT"
         android:layout_width="356dp"
         android:layout_height="448dp"
-        android:background="#77A676"
+        android:background="@drawable/corner"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

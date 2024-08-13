@@ -225,21 +225,31 @@
     </TableLayout>
 
     <Button
-        android:layout_width="332dp"
-        android:layout_height="45dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="184dp"
+        android:layout_width="343dp"
+        android:layout_height="52dp"
+        android:layout_marginEnd="32dp"
         android:backgroundTint="#77A676"
+        android:fontFamily="@font/anek_devanagari_medium"
         android:onClick="modificardatos"
         android:text="Actualizar"
-        android:fontFamily="@font/anek_devanagari_medium"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/info"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.805">
 
     </Button>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginBottom="158dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/update" />
+
     <ImageView
         android:id="@+id/imageView7"
         android:layout_width="185dp"
@@ -250,5 +260,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@mipmap/bann_nutri_background" />
 
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginBottom="104dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/comeback" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
