@@ -165,7 +165,7 @@ public class register extends AppCompatActivity {
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
         fichaM datos= new fichaM(medicalId,Comidas,enfer,calorias,medicamento,telefono,nutriologo,numNutri);
         // Almacenar los datos médicos bajo el UID del usuario
-        databaseReference.child("Usuarios").child(uid).child("Datos_medicos").child(medicalId).setValue(datos)
+        databaseReference.child("Usuarios").child(uid).child("Datos_medicos").setValue(datos)
                 .addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {
                         // Datos médicos almacenados con éxito
