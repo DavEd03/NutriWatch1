@@ -20,10 +20,16 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.UUID;
 
 public class register extends AppCompatActivity {
     FirebaseAuth mAuth;
@@ -34,6 +40,7 @@ public class register extends AppCompatActivity {
     EditText ciudad;
     Button regis;
     private String uid;
+    private String state;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,9 +57,22 @@ public class register extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        DatabaseReference connectedRef = FirebaseDatabase.getInstance().getReference(".info/connected");
+        connectedRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                state ="YES";
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(register.this, "Ha ocurrido un error de conexión, intente más tarde", Toast.LENGTH_SHORT).show();
+                state="NO";
+            }
+        });
     }
     public void MenuP (View view){
-        Intent i = new Intent(this, Menu_Principal.class);
+        Intent i = new Intent(this, MainActivity.class);
+        i.putExtra("Estado",state);
         startActivity(i);
     }
     public void Register (View view){
@@ -102,38 +122,58 @@ public class register extends AppCompatActivity {
             String estatura=defau;
             String enfermedades=defau;
             String talla= defau;
+            if(Nombre.isEmpty()){
+                nombre.setText("Introduzca un valor válido");
+            }else if(Edad.isEmpty()){
+                edad.setText("Introduzca un valor válido");
+            }else if(Ciudad.isEmpty()){
+                ciudad.setText("Introduzca un valor válido");
+            }else if(Correo.isEmpty()){
+                email.setText("Introduzca un valor válida");
+            }else{
             //Upload datos
             variables upload= new variables(Nombre, Correo, Edad, Ciudad, Peso, Imc, estatura, enfermedades, talla);
             FirebaseDatabase database = FirebaseDatabase.getInstance();
             DatabaseReference myRef = database.getReference("Usuarios/"+ uid + "/Datos básicos/");
             myRef.setValue(upload);
             Toast.makeText(register.this,"Usuario registrado correctamente",Toast.LENGTH_LONG).show();
+            crearficha();
+            mAuth.signOut();
             nombre.setText("");
             edad.setText("");
             ciudad.setText("");
             email.setText("");
             contra.setText("");
+            }
         }catch (Exception e2){
             Toast.makeText(register.this,"Error en: "+e2.getMessage(),Toast.LENGTH_LONG).show();
         }
     }
-    public String getDayOfWeekName() {
-        Calendar calendar = Calendar.getInstance();
-        int dayOfWeek = calendar.get(Calendar.DAY_OF_WEEK);
 
-        String[] days = {"Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"};
-        return days[dayOfWeek - 1]; // Convertir el número en el nombre del día
-    }
-    private void agendarComida(){
-        String dayOfWeek = getDayOfWeekName();
-        String almuerzo="";
-        String colacion1="";
-        String comida="";
-        String colacion2="";
-        String cena="";
-        int Total = 0;
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("Usuarios/"+ uid + "/Comidas/"+dayOfWeek+"/");
-        //myRef.setValue();
+    private void crearficha(){
+// Generar un ID médico único
+        String medicalId = UUID.randomUUID().toString();
+        String Comidas="No establecido";
+        String enfer="Sin datos";
+        String calorias="0";
+        String medicamento="Sin especificar";
+        String telefono="6751153832";
+        String nutriologo= "Dra. Pamela Perez ";
+        String numNutri="sin especificar";
+
+        // Crear una referencia a la base de datos
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
+        fichaM datos= new fichaM(medicalId,Comidas,enfer,calorias,medicamento,telefono,nutriologo,numNutri);
+        // Almacenar los datos médicos bajo el UID del usuario
+        databaseReference.child("Usuarios").child(uid).child("Datos_medicos").setValue(datos)
+                .addOnCompleteListener(task -> {
+                    if (task.isSuccessful()) {
+                        // Datos médicos almacenados con éxito
+
+                    } else {
+                        // Manejar el error
+
+                    }
+                });
     }
 }

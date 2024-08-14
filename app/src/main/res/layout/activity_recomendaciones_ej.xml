@@ -15,28 +15,17 @@
         android:layout_marginBottom="72dp"
         android:backgroundTint="#77A676"
         android:onClick="MenuP"
-        android:fontFamily="@font/anek_devanagari_medium"
         android:text="Regresar a la Pantalla Principal"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginBottom="76dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/comeback" />
-
     <LinearLayout
         android:id="@+id/LAYAUT"
         android:layout_width="356dp"
         android:layout_height="448dp"
-        android:background="@drawable/corner"
+        android:background="#77A676"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,30 +33,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.498">
-
-        <TextView
-            android:id="@+id/E"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="15dp"
-            android:gravity="center_horizontal"
-            android:text="Notificaciones de los elementos"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="15dp" />
-
-        <ListView
-            android:layout_width="345dp"
-            android:layout_height="320dp" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="356dp"
         android:layout_height="448dp"
-        android:background="@drawable/corner"
-
+        android:background="#77A676"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -75,21 +47,80 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.498">
+        <TextView
+            android:id="@+id/TVConsejo1"
+            android:text="Consejo 1"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            />
+        <TextView
+            android:id="@+id/TVdesc1"
+            android:text="Descripcion1"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            />
 
-        <ListView
-            android:layout_width="344dp"
-            android:layout_height="397dp"
-            android:fontFamily="@font/anek_devanagari_medium"/>
-
+        <TextView
+            android:id="@+id/TVConsejo2"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:gravity="center_horizontal"
+            android:text="Consejo 2"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+        <TextView
+            android:id="@+id/TVdesc2"
+            android:text="Descripcion2"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            />
+        <TextView
+            android:id="@+id/TVConsejo3"
+            android:text="Consejo 3"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            />
+        <TextView
+            android:id="@+id/TVdesc3"
+            android:text="Descripcion3"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            />
     </LinearLayout>
 
     <TextView
         android:id="@+id/recomenaciones"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Recomendaciones de ejercicios"
+        android:text="Recomendaciones de ejercisios "
         android:textColor="@color/black"
-        android:fontFamily="@font/anek_devanagari_medium"
         android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -132,12 +163,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
     <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="185dp"
-        android:layout_height="101dp"
-        android:layout_marginBottom="768dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/imageView2"
+        android:layout_width="267dp"
+        android:layout_height="228dp"
+        android:layout_marginBottom="596dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@mipmap/bann_nutri_background" />
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:srcCompat="@mipmap/nutriasset_foreground" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

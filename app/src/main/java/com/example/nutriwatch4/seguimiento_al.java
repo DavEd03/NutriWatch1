@@ -1,7 +1,5 @@
 package com.example.nutriwatch4;
 
-import static androidx.core.content.ContextCompat.startActivity;
-
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -55,7 +53,7 @@ public class seguimiento_al extends AppCompatActivity {
         Bundle datos= getIntent().getExtras();
         userId= datos.getString("nUsuario");
         // En tu actividad o fragmento
-        scheduleMealNotifications();
+       scheduleMealNotifications();
 
     }
     @Override
@@ -102,8 +100,8 @@ public class seguimiento_al extends AppCompatActivity {
         long currentTime = System.currentTimeMillis();
 
         // Desayuno: 8:00 AM
-        calendar.set(Calendar.HOUR_OF_DAY, 11);
-        calendar.set(Calendar.MINUTE, 57);
+        calendar.set(Calendar.HOUR_OF_DAY, 10);
+        calendar.set(Calendar.MINUTE, 4);
         calendar.set(Calendar.SECOND, 0);
         if (calendar.getTimeInMillis() > currentTime) {
             setAlarm(this, calendar.getTimeInMillis(), 1, "Desayuno", "¡Es hora de desayunar!");
@@ -111,7 +109,7 @@ public class seguimiento_al extends AppCompatActivity {
 
         // Almuerzo: 1:00 PM
         calendar.set(Calendar.HOUR_OF_DAY, 10);
-        calendar.set(Calendar.MINUTE, 30);
+        calendar.set(Calendar.MINUTE, 5);
         if (calendar.getTimeInMillis() > currentTime) {
             setAlarm(this, calendar.getTimeInMillis(), 2, "Almuerzo", "¡Es hora de almorzar!");
         }
@@ -125,20 +123,20 @@ public class seguimiento_al extends AppCompatActivity {
 
         // Cena: 7:00 PM
         calendar.set(Calendar.HOUR_OF_DAY, 23);
-        calendar.set(Calendar.MINUTE, 59);
+        calendar.set(Calendar.MINUTE, 23);
         if (calendar.getTimeInMillis() > currentTime) {
             setAlarm(this, calendar.getTimeInMillis(), 4, "Cena", "¡Es hora de cenar!");
         }
 
         // Snack nocturno: 9:00 PM
         calendar.set(Calendar.HOUR_OF_DAY, 23);
-        calendar.set(Calendar.MINUTE, 59);
+        calendar.set(Calendar.MINUTE, 24);
         if (calendar.getTimeInMillis() > currentTime) {
             setAlarm(this, calendar.getTimeInMillis(), 5, "Snack nocturno", "¡Es hora del snack nocturno!");
         }
     }
 
-    private void setAlarm(Context context, long triggerTime, int requestCode, String title, String message) {
+    private void setAlarm(@NonNull Context context, long triggerTime, int requestCode, String title, String message) {
         AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
 
         Intent intent = new Intent(context, ReminderBroadcastReceiver.class);
@@ -161,7 +159,7 @@ public class seguimiento_al extends AppCompatActivity {
         Intent cambio= new Intent(this, control_salud.class);
         startActivity(cambio);
     }
-    /*public void Agg_comida (View view){
+   /* public void Agg_comida (View view){
         Intent i= new Intent(this, agregar_comida.class);
         startActivity(i);
     }*/

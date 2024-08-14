@@ -43,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+
+
     }
     FirebaseAuth auth = FirebaseAuth.getInstance();
     @Override

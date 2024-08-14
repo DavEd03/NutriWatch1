@@ -102,7 +102,7 @@
             android:background="@color/white"
             android:ems="10"
             android:hint="Correo"
-            android:inputType="text"
+            android:inputType="textEmailAddress"
             android:textColor="@color/black"
             android:textSize="20dp" />
 
@@ -153,7 +153,7 @@
             android:background="@color/white"
             android:ems="10"
             android:hint="Edad"
-            android:inputType="date"
+            android:inputType="number"
             android:textColor="@color/black"
             android:textSize="20dp" />
 
