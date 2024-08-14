@@ -136,7 +136,7 @@ public class seguimiento_al extends AppCompatActivity {
         }
     }
 
-    private void setAlarm(Context context, long triggerTime, int requestCode, String title, String message) {
+    private void setAlarm(@NonNull Context context, long triggerTime, int requestCode, String title, String message) {
         AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
 
         Intent intent = new Intent(context, ReminderBroadcastReceiver.class);

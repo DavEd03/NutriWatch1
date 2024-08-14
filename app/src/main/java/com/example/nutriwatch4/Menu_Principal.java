@@ -28,8 +28,10 @@ public class Menu_Principal extends AppCompatActivity {
         });
         mAuth=FirebaseAuth.getInstance();
         Bundle datos= getIntent().getExtras();
+
         if(datos != null) {
             userId= datos.getString("nUsuario");
+
             if (userId == null) {
                 // "nUsuario" no existe en el Bundle
                 FirebaseUser user = mAuth.getCurrentUser();
@@ -37,7 +39,7 @@ public class Menu_Principal extends AppCompatActivity {
                     userId = user.getUid();
                 } else {
                     // No se puede obtener el UID, manejar el error
-                    showErrorAndRedirect();
+                        showErrorAndRedirect();
                 }
             }
         }else{
