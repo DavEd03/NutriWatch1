@@ -72,7 +72,8 @@
         android:id="@+id/linearLayout2"
         android:layout_width="356dp"
         android:layout_height="448dp"
-        android:background="#77A676"
+        android:background="@drawable/corner"
+
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -94,8 +95,10 @@
             android:textSize="15dp" />
 
         <ListView
+            android:id="@+id/Notis"
             android:layout_width="345dp"
-            android:layout_height="320dp" />
+            android:layout_height="320dp"
+            android:fontFamily="@font/anek_devanagari_medium" />
 
     </LinearLayout>
 
@@ -107,19 +110,27 @@
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/user"
-        android:onClick="User"/>
+        app:srcCompat="@drawable/user" />
+
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="267dp"
-        android:layout_height="228dp"
-        android:layout_marginBottom="596dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        android:id="@+id/imageView7"
+        android:layout_width="185dp"
+        android:layout_height="101dp"
+        android:layout_marginBottom="768dp"
+        android:onClick="MenuP"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:srcCompat="@mipmap/nutriasset_foreground" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@mipmap/bann_nutri_background" />
 
-
-
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="76dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/comeback" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,6 +19,7 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
     FirebaseAuth mAuth;
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     EditText password;
     Button Access;
     Button newacount;
+    private String uid;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +42,25 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+
+
     }
+    FirebaseAuth auth = FirebaseAuth.getInstance();
+    @Override
+    protected void onStart() {
+        super.onStart();
+        FirebaseUser currentUser = auth.getCurrentUser();
+        if (currentUser != null) {
+            uid= currentUser.getUid();
+            Intent i = new Intent(MainActivity.this, Menu_Principal.class);
+            i.putExtra("nUsuario",uid);
+            startActivity(i);
+        } else {
+           Toast.makeText(this, "Por favor inicie sesión con su cuenta", Toast.LENGTH_LONG).show();
+        }
+    }
+
     public void MenuP (View view){
         try{
             mAuth=FirebaseAuth.getInstance();
@@ -53,9 +73,11 @@ public class MainActivity extends AppCompatActivity {
                   @Override
                   public void onComplete(@NonNull Task<AuthResult> task) {
                       if(task.isComplete()){
+                          FirebaseUser currentUser = auth.getCurrentUser();
                           Toast.makeText(MainActivity.this, "Inicio de Sesión exitoso", Toast.LENGTH_LONG).show();
                           Intent i = new Intent(MainActivity.this, Menu_Principal.class);
-                          i.putExtra("nUsuario",User);
+                          uid= currentUser.getUid();
+                          i.putExtra("nUsuario",uid);
                           startActivity(i);
                       }
                   }
@@ -75,8 +97,6 @@ public class MainActivity extends AppCompatActivity {
         String User = (String) email.getText().toString();
         String Password = (String) password.getText().toString();
         Intent i = new Intent(this, register.class);
-        i.putExtra("x",User);
-        i.putExtra("y",Password);
         startActivity(i);
     }
 }

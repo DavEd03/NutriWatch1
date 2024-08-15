@@ -2,29 +2,160 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/seguimient_al"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#BED9BA"
-    tools:context=".seguimiento_al">
+    tools:context=".agregar_comida">
 
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="348dp"
+        android:layout_height="478dp"
+        android:background="@drawable/corner"
 
-    <TextView
-        android:id="@+id/te"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#267331"
-        android:gravity="center_horizontal"
-        android:text=""
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="35dp"
+        android:layout_marginEnd="15dp"
+
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.746"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.333">
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:text="Almuerzo "
+            android:fontFamily="@font/anek_devanagari_medium"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/edtAlmuerzoA"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:background="@color/white"
+            android:backgroundTint="#FFFFFF"
+            android:ems="10"
+            android:inputType="text"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/anek_devanagari_medium"
+            android:paddingTop="15dp"
+            android:text="Colación"
+
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textColorLink="#000000"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/edtColacion1A"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:inputType="text"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:fontFamily="@font/anek_devanagari_medium"
+
+            android:text="Comida"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/edtComidaA"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:background="@color/white"
+            android:backgroundTint="#F6F6F6"
+            android:ems="10"
+            android:inputType="text"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/anek_devanagari_medium"
+            android:paddingTop="15dp"
+            android:text="Colación"
+
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/edtColacion2A"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:inputType="text"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:text="Cena"
+            android:textAlignment="center"
+            android:fontFamily="@font/anek_devanagari_medium"
+
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/edtCenaA"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:inputType="text"
+            android:textColor="@color/black" />
+        <Spinner
+            android:id="@+id/spinnerDaysOfWeek"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/anek_devanagari_medium"
+            />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/recomenaciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AGREGAR DIETA"
+        android:textColor="@color/black"
+        android:fontFamily="@font/anek_devanagari_medium"
+
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.098" />
 
     <TextView
         android:id="@+id/textView2"
@@ -60,178 +191,38 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:id="@+id/recomenaciones"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="SEGUIMIENTO DE ALIMENTOS "
-        android:textColor="@color/black"
-        android:fontFamily="@font/anek_devanagari_medium"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.61"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.105" />
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="357dp"
-        android:layout_height="465dp"
-        android:background="@drawable/corner"
-        android:orientation="vertical"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.421"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.393">
-
-        <TextView
-            android:id="@+id/textView11"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/anek_devanagari_medium"
-            android:inputType="none"
-            android:paddingTop="15dp"
-            android:text="Almuerzo"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
-
-        <EditText
-            android:id="@+id/edtAlmuerzo"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="@color/white"
-            android:backgroundTint="#FFFFFF"
-            android:ems="10"
-            android:enabled="false"
-            android:inputType="none"
-            android:textColor="@color/black" />
-
-        <TextView
-            android:id="@+id/textView12"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/anek_devanagari_medium"
-            android:paddingTop="15dp"
-            android:text="Colación"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textColorLink="#000000"
-            android:textSize="20sp" />
-
-        <EditText
-            android:id="@+id/edtCol1"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="@color/white"
-            android:ems="10"
-            android:enabled="false"
-            android:inputType="none"
-            android:textColor="@color/black" />
-
-        <TextView
-            android:id="@+id/textView13"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/anek_devanagari_medium"
-            android:paddingTop="15dp"
-            android:text="Comida"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
-
-        <EditText
-            android:id="@+id/edtComida"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="@color/white"
-            android:backgroundTint="#F6F6F6"
-            android:ems="10"
-            android:enabled="false"
-            android:inputType="none"
-            android:textColor="@color/black" />
-
-        <TextView
-            android:id="@+id/textView14"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/anek_devanagari_medium"
-            android:paddingTop="15dp"
-            android:text="Colación"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
-
-        <EditText
-            android:id="@+id/edtCol2"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="@color/white"
-            android:ems="10"
-            android:enabled="false"
-            android:inputType="none"
-            android:textColor="@color/black" />
-
-        <TextView
-            android:id="@+id/textView15"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/anek_devanagari_medium"
-            android:paddingTop="15dp"
-            android:text="Cena"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
-
-        <EditText
-            android:id="@+id/edtCena"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="@color/white"
-            android:ems="10"
-            android:enabled="false"
-            android:inputType="none"
-            android:textColor="@color/black" />
-
-    </LinearLayout>
-
     <Button
-        android:id="@+id/button7"
-        android:layout_width="319dp"
-        android:layout_height="42dp"
+        android:id="@+id/button2"
+        android:layout_width="258dp"
+        android:layout_height="41dp"
         android:backgroundTint="#77A676"
-        android:onClick="Agg_comida"
-        android:text="Actualizar"
-        android:fontFamily="@font/anek_devanagari_medium"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.478"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.888" />
-
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="318dp"
-        android:layout_height="42dp"
-        android:backgroundTint="#77A676"
-        android:onClick="MenuP"
+        android:onClick="seguimiento_ali"
         android:text="Regresar"
         android:fontFamily="@font/anek_devanagari_medium"
+
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintHorizontal_bias="0.568"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.812" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.832" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="261dp"
+        android:layout_height="42dp"
+        android:backgroundTint="#77A676"
+        android:fontFamily="@font/anek_devanagari_medium"
+        android:onClick="agregar_dieta"
+        android:text="Agregar"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.578"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.757" />
 
     <ImageView
         android:id="@+id/imageView7"
@@ -248,8 +239,8 @@
         android:id="@+id/imageView8"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginBottom="154dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginBottom="196dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/comeback" />
@@ -258,10 +249,11 @@
         android:id="@+id/imageView14"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginBottom="89dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginBottom="135dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/update" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

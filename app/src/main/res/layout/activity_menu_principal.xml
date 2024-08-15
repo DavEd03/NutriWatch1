@@ -15,7 +15,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
-        android:text="Menu principal"
+        android:fontFamily="@font/anek_devanagari_medium"
+        android:text="Menú Principal"
         android:textColor="@color/black"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -60,7 +61,8 @@
     <LinearLayout
         android:layout_width="352dp"
         android:layout_height="124dp"
-        android:background="#77A676"
+        android:background="@drawable/corner"
+
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -73,9 +75,11 @@
             android:id="@+id/textView5"
             android:layout_width="match_parent"
             android:layout_height="107dp"
+            android:fontFamily="@font/anek_devanagari_medium"
             android:gravity="center_horizontal"
             android:onClick="seguimiento_ali"
-            android:text="Informacion acerca del seguimiento de Calorias  Nutrientes y Alimentos"
+            android:padding="20dp"
+            android:text="Gestión de Alimentos"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="15dp" />
@@ -84,8 +88,10 @@
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="352dp"
+
         android:layout_height="124dp"
-        android:background="#77A676"
+        android:background="@drawable/corner"
+
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -102,6 +108,7 @@
             android:layout_marginBottom="15dp"
             android:gravity="center_horizontal"
             android:onClick="control_S"
+            android:fontFamily="@font/anek_devanagari_medium"
             android:text="Control de Salud"
             android:textAlignment="center"
             android:textColor="@color/black"
@@ -111,7 +118,8 @@
     <LinearLayout
         android:layout_width="352dp"
         android:layout_height="124dp"
-        android:background="#77A676"
+        android:background="@drawable/corner"
+
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -126,9 +134,10 @@
             android:layout_height="108dp"
             android:layout_marginTop="15dp"
             android:layout_marginBottom="15dp"
+            android:fontFamily="@font/anek_devanagari_medium"
             android:gravity="center_horizontal"
             android:onClick="recomendaciones_ej"
-            android:text="Recomendacion de ejercicios"
+            android:text="Recomendación de ejercicios"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="15dp" />
@@ -160,27 +169,70 @@
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="142dp"
-        android:layout_height="48dp"
+        android:layout_width="179dp"
+        android:layout_height="59dp"
         android:backgroundTint="#77A676"
+        android:fontFamily="@font/anek_devanagari_medium"
+        android:onClick="cerrar"
         android:text="Cerrar sesion"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.899" />
+        app:layout_constraintVertical_bias="0.898" />
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="267dp"
-        android:layout_height="228dp"
-        android:layout_marginBottom="596dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        android:id="@+id/imageView7"
+        android:layout_width="185dp"
+        android:layout_height="101dp"
+        android:layout_marginBottom="768dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:srcCompat="@mipmap/nutriasset_foreground" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@mipmap/bann_nutri_background" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="36dp"
+        android:layout_height="38dp"
+        android:layout_marginBottom="90dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.338"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/cerrar_sesion" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="222dp"
+        android:layout_marginEnd="164dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/salu" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="164dp"
+        android:layout_marginBottom="370dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/food" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="164dp"
+        android:layout_marginBottom="180dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/fit" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

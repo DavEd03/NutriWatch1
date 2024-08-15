@@ -43,15 +43,18 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <LinearLayout
-        android:layout_width="319dp"
-        android:layout_height="569dp"
-        android:background="#77A676"
+        android:id="@+id/linearLayout4"
+        android:layout_width="340dp"
+        android:layout_height="490dp"
+        android:background="@drawable/corner"
+        android:fontFamily="@font/anek_devanagari_medium"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.563"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.623">
+        app:layout_constraintVertical_bias="0.379">
 
         <TextView
             android:id="@+id/textView9"
@@ -61,6 +64,7 @@
             android:layout_marginBottom="5dp"
             android:gravity="center_horizontal"
             android:text="Nombre"
+            android:fontFamily="@font/anek_devanagari_medium"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="20dp" />
@@ -85,6 +89,7 @@
             android:layout_marginBottom="5dp"
             android:gravity="center_horizontal"
             android:text="Correo"
+            android:fontFamily="@font/anek_devanagari_medium"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="20dp" />
@@ -97,7 +102,7 @@
             android:background="@color/white"
             android:ems="10"
             android:hint="Correo"
-            android:inputType="text"
+            android:inputType="textEmailAddress"
             android:textColor="@color/black"
             android:textSize="20dp" />
 
@@ -109,6 +114,7 @@
             android:layout_marginBottom="5dp"
             android:gravity="center_horizontal"
             android:text="Contraseña"
+            android:fontFamily="@font/anek_devanagari_medium"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="20dp" />
@@ -134,6 +140,7 @@
             android:layout_marginBottom="5dp"
             android:gravity="center_horizontal"
             android:text="Edad"
+            android:fontFamily="@font/anek_devanagari_medium"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="20dp" />
@@ -146,7 +153,7 @@
             android:background="@color/white"
             android:ems="10"
             android:hint="Edad"
-            android:inputType="date"
+            android:inputType="number"
             android:textColor="@color/black"
             android:textSize="20dp" />
 
@@ -158,6 +165,7 @@
             android:layout_marginBottom="5dp"
             android:gravity="center_horizontal"
             android:text="Ciudad"
+            android:fontFamily="@font/anek_devanagari_medium"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="20dp" />
@@ -174,27 +182,6 @@
             android:textColor="@color/black"
             android:textSize="20dp" />
 
-        <Button
-            android:id="@+id/REGRESAR"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="5dp"
-            android:backgroundTint="#BED9BA"
-            android:onClick="Register"
-            android:text="Registrar"
-            android:textColor="@color/black" />
-
-        <Button
-            android:id="@+id/button5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#BED9BA"
-            android:onClick="MenuP"
-            android:text="Regresar"
-            android:textColor="@color/black" />
-
 
     </LinearLayout>
 
@@ -204,20 +191,73 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
         android:text="Registro"
+        android:fontFamily="@font/anek_devanagari_medium"
         android:textColor="@color/black"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="185dp"
+        android:layout_height="101dp"
+        android:layout_marginBottom="768dp"
+        android:onClick="MenuP"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@mipmap/bann_nutri_background" />
+
+    <Button
+        android:id="@+id/REGRESAR"
+        android:layout_width="323dp"
+        android:layout_height="46dp"
+        android:backgroundTint="#77A676"
+        android:onClick="Register"
+        android:text="Registrar"
+        android:fontFamily="@font/anek_devanagari_medium"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.823" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="319dp"
+        android:layout_height="41dp"
+        android:backgroundTint="#77A676"
+        android:onClick="MenuP"
+        android:text="Regresar"
+        android:fontFamily="@font/anek_devanagari_medium"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.895" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginBottom="88dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/comeback" />
+
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="267dp"
-        android:layout_height="228dp"
-        android:layout_marginBottom="596dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:srcCompat="@mipmap/nutriasset_foreground" />
+        android:layout_width="41dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="142dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/new_account" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
