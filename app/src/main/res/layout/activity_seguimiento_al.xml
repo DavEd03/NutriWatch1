@@ -8,6 +8,7 @@
     android:background="#BED9BA"
     tools:context=".seguimiento_al">
 
+
     <TextView
         android:id="@+id/te"
         android:layout_width="match_parent"
@@ -77,7 +78,7 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="337dp"
-        android:layout_height="450dp"
+        android:layout_height="469dp"
         android:background="@drawable/corner"
 
         android:orientation="vertical"
@@ -92,10 +93,10 @@
             android:id="@+id/textView11"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/anek_devanagari_medium"
+            android:inputType="none"
             android:paddingTop="15dp"
             android:text="Almuerzo"
-            android:inputType="none"
-            android:fontFamily="@font/anek_devanagari_medium"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="20sp" />
@@ -103,21 +104,21 @@
         <EditText
             android:id="@+id/edtAlmuerzo"
             android:layout_width="match_parent"
-            android:layout_height="37dp"
+            android:layout_height="40dp"
             android:background="@color/white"
             android:backgroundTint="#FFFFFF"
             android:ems="10"
-            android:inputType="none"
             android:enabled="false"
+            android:inputType="none"
             android:textColor="@color/black" />
 
         <TextView
             android:id="@+id/textView12"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/anek_devanagari_medium"
             android:paddingTop="15dp"
             android:text="Colacion"
-            android:fontFamily="@font/anek_devanagari_medium"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textColorLink="#000000"
@@ -125,21 +126,21 @@
 
         <EditText
             android:id="@+id/edtCol1"
-            android:inputType="none"
             android:layout_width="match_parent"
-            android:layout_height="37dp"
+            android:layout_height="40dp"
             android:background="@color/white"
             android:ems="10"
             android:enabled="false"
+            android:inputType="none"
             android:textColor="@color/black" />
 
         <TextView
             android:id="@+id/textView13"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/anek_devanagari_medium"
             android:paddingTop="15dp"
             android:text="Comida"
-            android:fontFamily="@font/anek_devanagari_medium"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="20sp" />
@@ -147,21 +148,21 @@
         <EditText
             android:id="@+id/edtComida"
             android:layout_width="match_parent"
-            android:layout_height="37dp"
-            android:inputType="none"
+            android:layout_height="40dp"
             android:background="@color/white"
             android:backgroundTint="#F6F6F6"
             android:ems="10"
             android:enabled="false"
+            android:inputType="none"
             android:textColor="@color/black" />
 
         <TextView
             android:id="@+id/textView14"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/anek_devanagari_medium"
             android:paddingTop="15dp"
             android:text="Colacion"
-            android:fontFamily="@font/anek_devanagari_medium"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="20sp" />
@@ -169,7 +170,7 @@
         <EditText
             android:id="@+id/edtCol2"
             android:layout_width="match_parent"
-            android:layout_height="37dp"
+            android:layout_height="40dp"
             android:background="@color/white"
             android:ems="10"
             android:enabled="false"
@@ -180,9 +181,9 @@
             android:id="@+id/textView15"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/anek_devanagari_medium"
             android:paddingTop="15dp"
             android:text="Cena"
-            android:fontFamily="@font/anek_devanagari_medium"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="20sp" />
@@ -190,11 +191,11 @@
         <EditText
             android:id="@+id/edtCena"
             android:layout_width="match_parent"
-            android:layout_height="37dp"
+            android:layout_height="40dp"
             android:background="@color/white"
             android:ems="10"
-            android:inputType="none"
             android:enabled="false"
+            android:inputType="none"
             android:textColor="@color/black" />
 
     </LinearLayout>
@@ -294,4 +295,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@mipmap/bann_nutri_background" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="154dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/comeback" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="89dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/update" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
