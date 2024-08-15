@@ -232,11 +232,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView"
         app:layout_constraintVertical_bias="0.812" />
+
     <ImageView
         android:id="@+id/imageView7"
         android:layout_width="185dp"
         android:layout_height="101dp"
         android:layout_marginBottom="768dp"
+        android:onClick="MenuP"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
