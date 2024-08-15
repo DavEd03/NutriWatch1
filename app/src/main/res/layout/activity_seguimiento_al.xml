@@ -118,7 +118,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/anek_devanagari_medium"
             android:paddingTop="15dp"
-            android:text="Colacion"
+            android:text="Colación"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textColorLink="#000000"
@@ -162,7 +162,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/anek_devanagari_medium"
             android:paddingTop="15dp"
-            android:text="Colacion"
+            android:text="Colación"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="20sp" />

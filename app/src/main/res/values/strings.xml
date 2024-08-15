@@ -4,10 +4,10 @@
         <string-array name="days_of_week_array">
             <item>Lunes</item>
             <item>Martes</item>
-            <item>Miércoles</item>
+            <item>Miercoles</item>
             <item>Jueves</item>
             <item>Viernes</item>
-            <item>Sábado</item>
+            <item>Sabado</item>
             <item>Domingo</item>
         </string-array>
 

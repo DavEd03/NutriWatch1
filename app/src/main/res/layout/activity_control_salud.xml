@@ -173,7 +173,7 @@
                     android:layout_marginRight="20dp"
                     android:fontFamily="@font/anek_devanagari_medium"
                     android:padding="8dp"
-                    android:text="Telefono"
+                    android:text="Teléfono"
                     android:textColor="@color/black" />
 
                 <EditText
@@ -190,7 +190,7 @@
                     android:layout_marginRight="20dp"
                     android:fontFamily="@font/anek_devanagari_medium"
                     android:padding="8dp"
-                    android:text="Nutriologo"
+                    android:text="Nutriólogo"
                     android:textColor="@color/black" />
 
                 <EditText
