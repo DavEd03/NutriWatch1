@@ -111,26 +111,28 @@ public class Usuario extends AppCompatActivity {
         String talla= edtTalla.getText().toString().trim();
         String correo= usercorreo.trim();
         String ciudad= edtCiudad.getText().toString().trim();
-        variables upload = new variables(Nombre,correo,Edad,ciudad,Peso,Imc,estatura,enfermedades,talla);
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("Usuarios/" + userId + "/Datos básicos/");
+        if(Nombre.isEmpty()||Edad.isEmpty()||Peso.isEmpty()||Imc.isEmpty()||estatura.isEmpty()|| enfermedades.isEmpty()||talla.isEmpty()||correo.isEmpty()||ciudad.isEmpty()){
+            Toast.makeText(getApplicationContext(), "Por favor complete todo los datos", Toast.LENGTH_SHORT).show();
+        }else{
+            variables upload = new variables(Nombre,correo,Edad,ciudad,Peso,Imc,estatura,enfermedades,talla);
+            FirebaseDatabase database = FirebaseDatabase.getInstance();
+            DatabaseReference myRef = database.getReference("Usuarios/" + userId + "/Datos básicos/");
+            myRef.setValue(upload).addOnSuccessListener(new OnSuccessListener<Void>() {
+                @Override
+                public void onSuccess(Void aVoid) {
+                    // Datos actualizados con éxito
+                    Toast.makeText(getApplicationContext(), "Datos actualizados correctamente", Toast.LENGTH_SHORT).show();
+                    actualizardatos();
+                }
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                    // Error al actualizar los datos
+                    Toast.makeText(getApplicationContext(), "Error al actualizar los datos: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                }
+            });
 
-
-        myRef.setValue(upload).addOnSuccessListener(new OnSuccessListener<Void>() {
-            @Override
-            public void onSuccess(Void aVoid) {
-                // Datos actualizados con éxito
-                Toast.makeText(getApplicationContext(), "Datos actualizados correctamente", Toast.LENGTH_SHORT).show();
-                actualizardatos();
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                // Error al actualizar los datos
-                Toast.makeText(getApplicationContext(), "Error al actualizar los datos: " + e.getMessage(), Toast.LENGTH_SHORT).show();
-            }
-        });
-
+        }
     }catch (Exception e){
         Toast.makeText(getApplicationContext(), "Error al actualizar los datos: " + e.getMessage(), Toast.LENGTH_SHORT).show();
     }
