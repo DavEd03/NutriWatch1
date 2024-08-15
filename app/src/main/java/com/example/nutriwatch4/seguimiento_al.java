@@ -130,8 +130,8 @@ public class seguimiento_al extends AppCompatActivity {
         }
 
         // Snack nocturno: 9:00 PM
-        calendar.set(Calendar.HOUR_OF_DAY, 23);
-        calendar.set(Calendar.MINUTE, 24);
+        calendar.set(Calendar.HOUR_OF_DAY, 01);
+        calendar.set(Calendar.MINUTE, 23);
         if (calendar.getTimeInMillis() > currentTime) {
             setAlarm(this, calendar.getTimeInMillis(), 5, "Snack nocturno", "¡Es hora del snack nocturno!");
         }
