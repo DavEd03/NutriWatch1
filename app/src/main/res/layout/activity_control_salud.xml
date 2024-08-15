@@ -95,9 +95,7 @@
                     android:id="@+id/edtNMedico"
                     android:layout_marginRight="10dp"
                     android:background="@color/white"
-                    android:clickable="false"
-                    android:editable="false"
-                    android:inputType="number"
+                    android:inputType="none"
                     android:textColor="@color/black" />
             </TableRow>
 
@@ -192,11 +190,11 @@
                     android:layout_marginRight="20dp"
                     android:fontFamily="@font/anek_devanagari_medium"
                     android:padding="8dp"
-                    android:text="Enfermedades:"
+                    android:text="Nutriologo"
                     android:textColor="@color/black" />
 
                 <EditText
-                    android:id="@+id/edtEnf"
+                    android:id="@+id/edtnutri"
                     android:layout_marginRight="10dp"
                     android:background="@color/white"
                     android:inputType="text"
@@ -212,11 +210,11 @@
                     android:layout_marginRight="20dp"
                     android:fontFamily="@font/anek_devanagari_medium"
                     android:padding="8dp"
-                    android:text="Nutriólogo:"
+                    android:text=" Contacto Nutriólogo:"
                     android:textColor="@color/black" />
 
                 <EditText
-                    android:id="@+id/edtnutri"
+                    android:id="@+id/edtnumNutri"
                     android:layout_marginRight="10dp"
                     android:background="@color/white"
                     android:inputType="text"
@@ -257,6 +255,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="220dp"
         android:backgroundTint="#77A676"
+        android:onClick="actualizar"
         android:text="Actualizar"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"

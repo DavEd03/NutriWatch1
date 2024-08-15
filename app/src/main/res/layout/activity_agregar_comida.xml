@@ -11,7 +11,7 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="348dp"
-        android:layout_height="440dp"
+        android:layout_height="470dp"
         android:background="@drawable/corner"
 
         android:layout_marginEnd="15dp"
@@ -31,13 +31,12 @@
             android:paddingTop="15dp"
             android:text="Almuerzo "
             android:fontFamily="@font/anek_devanagari_medium"
-
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/editTextText"
+            android:id="@+id/edtAlmuerzoA"
             android:layout_width="match_parent"
             android:layout_height="37dp"
             android:background="@color/white"
@@ -60,7 +59,7 @@
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/editTextText2"
+            android:id="@+id/edtColacion1A"
             android:layout_width="match_parent"
             android:layout_height="37dp"
             android:background="@color/white"
@@ -81,7 +80,7 @@
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/editTextText3"
+            android:id="@+id/edtComidaA"
             android:layout_width="match_parent"
             android:layout_height="37dp"
             android:background="@color/white"
@@ -103,7 +102,7 @@
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/editTextText4"
+            android:id="@+id/edtColacion2A"
             android:layout_width="match_parent"
             android:layout_height="37dp"
             android:background="@color/white"
@@ -124,13 +123,20 @@
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/editTextText5"
+            android:id="@+id/edtCenaA"
             android:layout_width="match_parent"
             android:layout_height="37dp"
             android:background="@color/white"
             android:ems="10"
             android:inputType="text"
             android:textColor="@color/black" />
+        <Spinner
+            android:id="@+id/spinnerDaysOfWeek"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/anek_devanagari_medium"
+            />
+
 
     </LinearLayout>
 
@@ -206,9 +212,9 @@
         android:layout_width="261dp"
         android:layout_height="42dp"
         android:backgroundTint="#77A676"
-        android:text="Agregar"
         android:fontFamily="@font/anek_devanagari_medium"
-
+        android:onClick="agregar_dieta"
+        android:text="Agregar"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -94,6 +94,7 @@
             android:layout_height="wrap_content"
             android:paddingTop="15dp"
             android:text="Almuerzo"
+            android:inputType="none"
             android:fontFamily="@font/anek_devanagari_medium"
             android:textAlignment="center"
             android:textColor="@color/black"
@@ -106,7 +107,8 @@
             android:background="@color/white"
             android:backgroundTint="#FFFFFF"
             android:ems="10"
-            android:inputType="text"
+            android:inputType="none"
+            android:enabled="false"
             android:textColor="@color/black" />
 
         <TextView
@@ -123,11 +125,12 @@
 
         <EditText
             android:id="@+id/edtCol1"
+            android:inputType="none"
             android:layout_width="match_parent"
             android:layout_height="37dp"
             android:background="@color/white"
             android:ems="10"
-            android:inputType="text"
+            android:enabled="false"
             android:textColor="@color/black" />
 
         <TextView
@@ -145,10 +148,11 @@
             android:id="@+id/edtComida"
             android:layout_width="match_parent"
             android:layout_height="37dp"
+            android:inputType="none"
             android:background="@color/white"
             android:backgroundTint="#F6F6F6"
             android:ems="10"
-            android:inputType="text"
+            android:enabled="false"
             android:textColor="@color/black" />
 
         <TextView
@@ -168,7 +172,8 @@
             android:layout_height="37dp"
             android:background="@color/white"
             android:ems="10"
-            android:inputType="text"
+            android:enabled="false"
+            android:inputType="none"
             android:textColor="@color/black" />
 
         <TextView
@@ -188,7 +193,8 @@
             android:layout_height="37dp"
             android:background="@color/white"
             android:ems="10"
-            android:inputType="text"
+            android:inputType="none"
+            android:enabled="false"
             android:textColor="@color/black" />
 
     </LinearLayout>

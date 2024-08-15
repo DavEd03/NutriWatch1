@@ -44,6 +44,7 @@ public class seguimiento_al extends AppCompatActivity {
 
         });
 
+
         edtAlmuerzo=findViewById(R.id.edtAlmuerzo);
         edtCol1=findViewById(R.id.edtCol1);
         edtCol2=findViewById(R.id.edtCol2);
@@ -159,10 +160,11 @@ public class seguimiento_al extends AppCompatActivity {
         Intent cambio= new Intent(this, control_salud.class);
         startActivity(cambio);
     }
-   /* public void Agg_comida (View view){
+   public void Agg_comida (View view){
         Intent i= new Intent(this, agregar_comida.class);
+       i.putExtra("nUsuario",userId);
         startActivity(i);
-    }*/
+    }
     public void MenuP (View view){
         Intent i = new Intent(this, Menu_Principal.class);
         startActivity(i);
